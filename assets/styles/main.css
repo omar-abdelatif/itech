@@ -1,0 +1,99 @@
+/* ! GLOBAL */
+*{
+    transition: all 0.5s;
+}
+p{
+    margin-bottom: 0;
+}
+.mt-30{
+    margin-top: 30px;
+}
+.mb-30{
+    margin-bottom: 30px;
+}
+.mr-30{
+    margin-right: 30px;
+}
+/* ! Logo ! */
+.social-icons i{
+    font-size: 40px;
+    border-radius: 50%;
+    padding: 20px;
+    color: #000;
+}
+.facebook:hover i{
+    color: #fff;
+    background-color: #3b5998;
+}
+.whatsapp:hover i{
+    color: #fff;
+    background-color: #27b159;
+}
+.contact p:last-child{
+    font-size: 25px;
+}
+/* ! Navbar ! */
+.navbar{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.nav .nav-item{
+    border-right: 1px solid #333;
+}
+.nav .nav-item:last-child{
+    border-right: none;
+}
+.nav-link{
+    color: #fff;
+}
+.nav-link:hover{
+    color: #000;
+}
+/* ! Hero ! */
+/* ! Features ! */
+/* ! Footer ! */
+/* ! Footer ! */
+/* ! Footer ! */
+/* ! Footer ! */
+/* ! Footer ! */
+/* ! Apointment ! */
+/* ! Footer ! */
+.text-left{
+    text-align: left !important;
+}
+.address p {
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+.address p:last-child{
+    border-bottom: none;
+}
+.address a{
+    color: #fff;
+}
+.social a {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 10px !important;
+    font-size: 25px;
+    color: #fff;
+}
+.social p {
+    font-size: 25px;
+}
+.facebook:hover a{
+    background-color: #3b5998;
+    border: 2px solid #3b5998 !important;
+}
+.whatsapp:hover a{
+    background-color: #27b159;
+    border: 2px solid #27b159 !important;
+}
+/* ! CopyRight ! */
+.copyright p a{
+    text-decoration: none;
+}
+.copyright p a:hover{
+    letter-spacing: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+}
