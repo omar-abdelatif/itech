@@ -35,7 +35,7 @@
         <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarSupportedContent">
             <ul class="nav justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="/index.php">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Services</a>

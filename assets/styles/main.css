@@ -52,6 +52,14 @@ p{
 .nav-link:hover{
     color: #000;
 }
+.fixed{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 /* ! Hero ! */
 .hero{
     background-image: url(../../assets/imgs/images/banner.jpg);
@@ -97,7 +105,19 @@ p{
 /* ! Footer ! */
 /* ! Footer ! */
 /* ! Footer ! */
-/* ! Apointment ! */
+/* ! Scroll ! */
+.scroll{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000;
+    color: #fff;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    z-index: 9;
+    display: none;
+}
 /* ! Footer ! */
 .text-left{
     text-align: left !important;
