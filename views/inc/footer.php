@@ -1,4 +1,8 @@
-    <div class="scroll"></div>
+    <div class="scroll">
+        <a class="btn">
+            <i class="fa-duotone fa-arrow-up"></i>
+        </a>
+    </div>
     <footer class="bg-secondary text-white text-center p-4">
         <div class="container">
             <div class="row">

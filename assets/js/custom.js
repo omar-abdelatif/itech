@@ -9,3 +9,18 @@ window.addEventListener("scroll", function () {
         navbar.classList.remove("fixed");
     }
 });
+//! Scroll
+const Scroll = document.querySelector(".scroll")
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 100) {
+        Scroll.classList.add("show");
+    } else {
+        Scroll.classList.remove("show");
+    }
+});
+document.querySelector(".scroll").addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+})
