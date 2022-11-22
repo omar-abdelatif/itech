@@ -1,3 +1,3 @@
 <section class="features">
-    <h1>services Section</h1>
+    <h1>Services Section</h1>
 </section>

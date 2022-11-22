@@ -23,6 +23,7 @@
                     <a href="" class="btn btn-outline-primary mx-auto">About Us</a>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
         </div>
+        <div class="swiper-pagination"></div>
+    </div>
 </section>
