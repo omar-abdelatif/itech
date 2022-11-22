@@ -14,6 +14,9 @@ p{
 .mr-30{
     margin-right: 30px;
 }
+.ml-150{
+    margin-left: 150px;
+}
 /* ! Logo ! */
 .social-icons i{
     font-size: 40px;
@@ -50,6 +53,44 @@ p{
     color: #000;
 }
 /* ! Hero ! */
+.hero{
+    background-image: url(../../assets/imgs/images/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    background-color: #000;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide .text{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    height: 500px;
+}
+.swiper-slide .text p{
+    font-size: 25px;
+}
+.swiper-slide .text h1{
+    font-size: 70px;
+    font-weight: bolder;
+}
+.swiper-slide .text a{
+    margin-top: 40px;
+    width: 350px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* ! Features ! */
 /* ! Footer ! */
 /* ! Footer ! */

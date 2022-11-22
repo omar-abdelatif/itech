@@ -74,7 +74,20 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script type="module">
         import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
-        const swiper = new Swiper(".mySwiper", {})
+        const swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+                clickable: true,
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            touchMoveStopPropagation: true,
+            speed: 700,
+        })
     </script>
     <script src="/assets/js/custom.js"></script>
     </body>
