@@ -1,6 +1,6 @@
 <section class="about">
-    <div class="container-fluid p-0">
-        <div class="row justify-content-center align-items-center text-center p-0">
+    <div class="container-fluid">
+        <div class="row align-items-center p-0">
             <div class="col-lg-6 p-0">
                 <div class="left-side">
                     <div class="img">
@@ -9,7 +9,17 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <h1>right section</h1>
+                <div class="right-side ml-3">
+                    <div class="title">
+                        <h1 class="bold text-left">ABOUT US</h1>
+                    </div>
+                    <div class="desc">
+                        <p class="text-left">
+                            The highly-trained technicians have many years of experience with all laptop, notebook, macbook and desktop computer repairs. We pride our company on honesty and the good relationships forged through customer satisfaction. We service all makes and models of MAC laptops, Imac, PC laptops, notebooks and most desktops: Dell, Sony, IBM, HP, Acer, Apple, etc.
+                        </p>
+                    </div>
+                    <a href="about.php" class="btn btn-outline-success text-left">View More</a>
+                </div>
             </div>
         </div>
     </div>

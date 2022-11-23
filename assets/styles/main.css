@@ -100,7 +100,28 @@ h1,h2,h3,h4,h5,h6{
     justify-content: center;
     align-items: center;
 }
-/* ! Features ! */
+/* ! About ! */
+.right-side{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.right-side .title{
+    margin-bottom: 30px;
+}
+.right-side .title h1{
+    font-size: 60px;
+    font-weight: bolder;
+}
+.right-side .desc{
+    margin-bottom: 30px;
+}
+.right-side p{
+    font-size: 15px;
+    line-height: 33px;
+}
+.right-side a{
+    font-size: 20px;
+}
 /* ! Footer ! */
 /* ! Footer ! */
 /* ! Footer ! */
