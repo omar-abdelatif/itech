@@ -94,7 +94,7 @@
             speed: 700,
         })
     </script>
-    <script src="/assets/js/custom.js"></script>
+    <script src="assets/js/custom.js"></script>
     </body>
 
     </html>
