@@ -4,11 +4,11 @@
             <div class="col-lg-4">
                 <div class="item">
                     <div class="item-icon">
-
+                        icon
                     </div>
                     <div class="item-desc">
                         <p>
-
+                            description
                         </p>
                     </div>
                 </div>
@@ -16,11 +16,11 @@
             <div class="col-lg-4">
                 <div class="item">
                     <div class="item-icon">
-
+                        icon
                     </div>
                     <div class="item-desc">
                         <p>
-
+                            description
                         </p>
                     </div>
                 </div>
@@ -28,11 +28,11 @@
             <div class="col-lg-4">
                 <div class="item">
                     <div class="item-icon">
-
+                        icon
                     </div>
                     <div class="item-desc">
                         <p>
-
+                            description
                         </p>
                     </div>
                 </div>
