@@ -10,7 +10,7 @@
                     <div class="title">
                         <h3>WHY US?</h3>
                     </div>
-                    <div class="desc">
+                    <div class="desc mt-30">
                         <p class="text-left">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                             Fuga aspernatur magni ea voluptas repudiandae animi facere nulla,
@@ -24,7 +24,7 @@
                     <div class="title">
                         <h3>CONTACT US</h3>
                     </div>
-                    <div class="address text-left">
+                    <div class="address text-left mt-30">
                         <p class="p-2">PO Box 54321 Some str. 765, Los Angeles, California, United States</p>
                         <p class="p-2">
                             <i class="fa-duotone fa-mobile"></i>
@@ -65,7 +65,7 @@
     <section class="copyright bg-dark text-center p-3 text-white">
         <div class="logo p-2">
             <a href="/index.php" class="btn">
-                <img src="assets/imgs/fav.ico.PNG" width="150" alt="">
+                <img src="<?php __DIR__ ?>/assets/imgs/fav.ico.PNG" width="150" alt="">
             </a>
         </div>
         <p class="m-0">© Copyright
