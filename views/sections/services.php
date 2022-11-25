@@ -4,11 +4,11 @@
             <div class="col-lg-4">
                 <div class="item">
                     <div class="item-icon">
-                        icon
+                        <h1>icon</h1>
                     </div>
                     <div class="item-desc">
                         <p>
-                            description
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum totam blanditiis accusantium eum. Facilis iusto doloremque itaque ducimus cumque rem. Quam dolor distinctio vel consequuntur debitis saepe, ipsa necessitatibus sint.
                         </p>
                     </div>
                 </div>
@@ -16,11 +16,11 @@
             <div class="col-lg-4">
                 <div class="item">
                     <div class="item-icon">
-                        icon
+                        <h1>icon</h1>
                     </div>
                     <div class="item-desc">
                         <p>
-                            description
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum totam blanditiis accusantium eum. Facilis iusto doloremque itaque ducimus cumque rem. Quam dolor distinctio vel consequuntur debitis saepe, ipsa necessitatibus sint.
                         </p>
                     </div>
                 </div>
@@ -28,11 +28,11 @@
             <div class="col-lg-4">
                 <div class="item">
                     <div class="item-icon">
-                        icon
+                        <h1>icon</h1>`
                     </div>
                     <div class="item-desc">
                         <p>
-                            description
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum totam blanditiis accusantium eum. Facilis iusto doloremque itaque ducimus cumque rem. Quam dolor distinctio vel consequuntur debitis saepe, ipsa necessitatibus sint.
                         </p>
                     </div>
                 </div>
