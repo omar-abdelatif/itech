@@ -59,7 +59,7 @@ h1,h2,h3,h4,h5,h6{
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 9;
+    z-index: 2;
 }
 /* ! Hero ! */
 .hero{
@@ -139,28 +139,22 @@ h1,h2,h3,h4,h5,h6{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    position: relative;
-}
-.services .overlay{
-    position: absolute;
-    inset: 0;
-    background-color: #000;
-    opacity: 0.8;
-    width: 100%;
-    height: 100%;
-}
-.z-index-one{
-    z-index: 1 !important;
 }
 .item{
-    border: 2px solid #000;
+    border: 2px solid #fff;
     padding: 10px;
-    color: #000;
+    color: #fff;
     border-radius: 5px;
+}
+.item-icon{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.item-desc{
+    padding-bottom: 20px;
 }
 /* ! Reviews ! */
 /* ! Partners ! */
-/* ! Footer ! */
 /* ! Contact ! */
 /* ! Scroll ! */
 .scroll{
@@ -172,7 +166,6 @@ h1,h2,h3,h4,h5,h6{
     width: 75px;
     height: 75px;
     border-radius: 50%;
-    z-index: 9;
     opacity: 0;
     z-index: -1;
     display: flex;

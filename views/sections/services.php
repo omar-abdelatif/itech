@@ -1,6 +1,6 @@
 <section class="services py-5">
-    <div class="overlay"></div>
-    <div class="container text-center z-index-one">
+    <!-- <div class="bg-color"></div> -->
+    <div class="container text-center">
         <div class="row justify-content-center align-items-center">
             <div class="col-lg-4">
                 <div class="item">
