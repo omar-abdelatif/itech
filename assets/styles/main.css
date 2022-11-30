@@ -74,7 +74,7 @@ h1,h2,h3,h4,h5,h6{
 .overlay{
     position: absolute;
     background-color: #000;
-    opacity: 0.8;
+    opacity: 0.1;
     width: 100%;
     height: 100%;
 }
@@ -154,6 +154,46 @@ h1,h2,h3,h4,h5,h6{
     padding-bottom: 20px;
 }
 /* ! Reviews ! */
+.reviews{
+    background-image: url(../imgs/images/S6C4pW.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+.reviews .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #3b5998;
+    opacity: 0.6;
+    z-index: -1;
+}
+.swiper-wrapper{
+    margin-bottom: 30px;
+}
+.slider-img img{
+    width: 100px;
+    border-radius: 50%;
+}
+.open-quote i, .close-quote i{
+    font-size: 25px;
+    color: #fff;
+}
+.open-quote{
+    padding-right: 50px;
+}
+.close-quote{
+    padding-bottom: 60px;
+}
+.swiper-pagination-bullet{
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+}
 /* ! Partners ! */
 /* ! Contact ! */
 /* ! Scroll ! */
