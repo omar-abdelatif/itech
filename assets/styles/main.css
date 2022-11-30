@@ -183,16 +183,20 @@ h1,h2,h3,h4,h5,h6{
     font-size: 25px;
     color: #fff;
 }
-.open-quote{
-    padding-right: 50px;
+.open-quote i{
+    padding-right: 120px;
 }
 .close-quote{
     padding-bottom: 60px;
+    padding-left: 120px;
 }
 .swiper-pagination-bullet{
     width: 20px;
     height: 20px;
     background-color: #fff;
+}
+.reviews .swiper-pagination{
+    padding-top: 60px;
 }
 /* ! Partners ! */
 /* ! Contact ! */

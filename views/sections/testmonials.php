@@ -1,6 +1,6 @@
 <section class="reviews">
     <div class="overlay"></div>
-    <div class="title text-center py-4">
+    <div class="title text-center text-white text-decoration-underline py-4">
         <h1>Testmonials Section</h1>
     </div>
     <div class="container">
@@ -40,5 +40,4 @@
             <div class="swiper-pagination"></div>
         </div>
     </div>
-
 </section>
