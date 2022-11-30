@@ -10,27 +10,33 @@
             </div>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="slider-img text-center">
+                    <div class="slider-img mb-4 text-center">
                         <img src="https://via.placeholder.com/150" alt="rev-1">
                     </div>
-                    <div class="texts text-center">
-                        <h1>slide one</h1>
+                    <div class="texts w-50 mx-auto text-white text-center">
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa excepturi, optio ab tenetur dolorum, ratione facere quis libero ullam, exercitationem a cumque? Eos doloremque, cupiditate dolores veniam velit unde atque.
+                        </p>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="slider-img text-center">
+                    <div class="slider-img mb-4 text-center">
                         <img src="https://via.placeholder.com/150" alt="rev-2">
                     </div>
-                    <div class="texts text-center">
-                        <h1>slide two</h1>
+                    <div class="texts w-50 mx-auto text-white text-center">
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa excepturi, optio ab tenetur dolorum, ratione facere quis libero ullam, exercitationem a cumque? Eos doloremque, cupiditate dolores veniam velit unde atque.
+                        </p>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="slider-img text-center">
+                    <div class="slider-img mb-4 text-center">
                         <img src="https://via.placeholder.com/150" alt="rev-3">
                     </div>
-                    <div class="texts text-center">
-                        <h1>slide three</h1>
+                    <div class="texts w-50 mx-auto text-white text-center">
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa excepturi, optio ab tenetur dolorum, ratione facere quis libero ullam, exercitationem a cumque? Eos doloremque, cupiditate dolores veniam velit unde atque.
+                        </p>
                     </div>
                 </div>
             </div>
