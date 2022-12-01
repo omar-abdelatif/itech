@@ -200,6 +200,30 @@ h1,h2,h3,h4,h5,h6{
 }
 /* ! Partners ! */
 /* ! Contact ! */
+.contactt{
+    background-image: url(../imgs/images/contact.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+.contactt .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #3b5998;
+    opacity: 0.6;
+    z-index: -1;
+}
+form button{
+    width: 170px;
+    height: 46px;
+}
+input[type=text]{
+    border: 2px solid #000;
+}
 /* ! Scroll ! */
 .scroll{
     position: fixed;
