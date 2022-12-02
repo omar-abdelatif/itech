@@ -19,7 +19,6 @@
 	<div class="preloader">
 		<div class="preloader_image"></div>
 	</div>
-	<!-- search modal -->
 	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
 		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			<span aria-hidden="true">
@@ -86,7 +85,7 @@
 								</h4>
 								<hr class="bottommargin_30">
 								<div class="wrap-forms">
-									<form action="../config/register.php" method="post">
+									<form action="../admin-dashboard/core/user.php" method="post">
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="form-group has-placeholder">
@@ -144,7 +143,6 @@
 			</section>
 		</div>
 	</div>
-	<!-- template init -->
 	<script src="../admin-dashboard/assets/js/compressed.js"></script>
 	<script src="../admin-dashboard/assets/js/main.js"></script>
 </body>

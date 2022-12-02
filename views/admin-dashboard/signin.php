@@ -84,7 +84,7 @@
 								</h4>
 								<hr class="bottommargin_30">
 								<div class="wrap-forms">
-									<form>
+									<form method="POST" action="../admin-dashboard/core/signin.php">
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="form-group has-placeholder">
@@ -139,7 +139,6 @@
 			</section>
 		</div>
 	</div>
-	<!-- template init -->
 	<script src="../admin-dashboard/assets/js/compressed.js"></script>
 	<script src="../admin-dashboard/assets/js/main.js"></script>
 </body>
