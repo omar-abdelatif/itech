@@ -4,6 +4,7 @@
 <head>
 	<title>FixIt</title>
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../admin-dashboard/assets/style/bootstrap.min.css">
@@ -18,6 +19,7 @@
 	<div class="preloader">
 		<div class="preloader_image"></div>
 	</div>
+	<!-- search modal -->
 	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
 		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			<span aria-hidden="true">
@@ -80,17 +82,26 @@
 						<div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 to_animate">
 							<div class="with_border with_padding">
 								<h4 class="text-center">
-									Sign In to Your Account
+									Sign Up New Account
 								</h4>
 								<hr class="bottommargin_30">
 								<div class="wrap-forms">
-									<form>
+									<form action="../config/register.php" method="post">
+										<div class="row">
+											<div class="col-sm-12">
+												<div class="form-group has-placeholder">
+													<label for="login-name">Your Name</label>
+													<i class="grey fa fa-user"></i>
+													<input type="text" class="form-control" name="name" id="login-name" placeholder="Name">
+												</div>
+											</div>
+										</div>
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="form-group has-placeholder">
 													<label for="login-email">Email address</label>
 													<i class="grey fa fa-envelope-o"></i>
-													<input type="email" class="form-control" id="login-email" placeholder="Email Address">
+													<input type="email" class="form-control" name="email" id="login-email" placeholder="Email Address">
 												</div>
 											</div>
 										</div>
@@ -99,7 +110,16 @@
 												<div class="form-group has-placeholder">
 													<label for="login-password">Password</label>
 													<i class="grey fa fa-pencil-square-o"></i>
-													<input type="password" class="form-control" id="login-password" placeholder="Password">
+													<input type="password" class="form-control" name="password" id="login-password" placeholder="Password">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<div class="form-group has-placeholder">
+													<label for="login-password2">Retype Password</label>
+													<i class="grey fa fa-pencil-square-o"></i>
+													<input type="password" class="form-control" name="re-pass" id="login-password2" placeholder="Retype Password">
 												</div>
 											</div>
 										</div>
@@ -111,27 +131,12 @@
 												</div>
 											</div>
 										</div>
-										<button type="submit" class="theme_button block_button color1">Log In</button>
-									</form>
-								</div>
-								<div class="darklinks text-center topmargin_20">
-									<a role="button" data-toggle="collapse" href="#signin-resend-password" aria-expanded="false" aria-controls="signin-resend-password">Forgot your password?</a>
-								</div>
-								<div class="collapse form-inline-button" id="signin-resend-password">
-									<form class="form-inline topmargin_20">
-										<div class="form-group">
-											<label class="sr-only">Enter your e-mail</label>
-											<input type="email" class="form-control" placeholder="E-mail">
-										</div>
-										<button type="submit" class="theme_button with_icon">
-											<i class="fa fa-share"></i>
-										</button>
+										<button type="submit" name="submit" class="theme_button block_button color1">Create an account</button>
 									</form>
 								</div>
 							</div>
-							<p class="divider_20 text-center">
-								Not registered? <a href="admin_signup.php">Create an account</a>.<br>
-								or go <a href="index.html">Home</a>
+							<p class="divider_20 text-center"> Already registered?
+								<a href="admin_signin.html">Log In</a>.
 							</p>
 						</div>
 					</div>
