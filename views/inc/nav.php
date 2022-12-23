@@ -9,7 +9,7 @@
             </div>
             <div class="col-lg-4">
                 <div class="logo text-center">
-                    <a class="navbar-brand" href="/index.php">
+                    <a class="navbar-brand" href="index.php">
                         <img src="assets/imgs/fav.ico.PNG" width="150" class="m-4" alt="logo">
                     </a>
                 </div>
@@ -35,7 +35,7 @@
         <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarSupportedContent">
             <ul class="nav justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Services</a>

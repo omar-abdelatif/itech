@@ -135,7 +135,7 @@
 								</div>
 							</div>
 							<p class="divider_20 text-center"> Already registered?
-								<a href="admin_signin.html">Log In</a>.
+								<a href="signin.php">Log In</a>.
 							</p>
 						</div>
 					</div>

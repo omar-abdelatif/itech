@@ -130,8 +130,8 @@
 								</div>
 							</div>
 							<p class="divider_20 text-center">
-								Not registered? <a href="admin_signup.php">Create an account</a>.<br>
-								or go <a href="index.html">Home</a>
+								Not registered? <a href="signup.php">Create an account</a>.<br>
+								or go <a href="../../index.php">Home</a>
 							</p>
 						</div>
 					</div>
