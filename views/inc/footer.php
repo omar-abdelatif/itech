@@ -65,7 +65,7 @@
     <section class="copyright bg-dark text-center p-3 text-white">
         <div class="logo p-2">
             <a href="/index.php" class="btn">
-                <img src="<?php __DIR__ ?>/assets/imgs/fav.ico.PNG" width="150" alt="">
+                <img src="assets/imgs/fav.ico.PNG" width="150" alt="">
             </a>
         </div>
         <p class="m-0">© Copyright

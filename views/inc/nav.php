@@ -10,7 +10,7 @@
             <div class="col-lg-4">
                 <div class="logo text-center">
                     <a class="navbar-brand" href="/index.php">
-                        <img src="<?php __DIR__ ?>/assets/imgs/fav.ico.PNG" width="150" class="m-4" alt="logo">
+                        <img src="assets/imgs/fav.ico.PNG" width="150" class="m-4" alt="logo">
                     </a>
                 </div>
             </div>

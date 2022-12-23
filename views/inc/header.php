@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/styles/fonts.css">
-    <link rel="stylesheet" href="<?php __DIR__ ?>/assets/styles/main.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
     <title>ITECH</title>
 </head>
 
