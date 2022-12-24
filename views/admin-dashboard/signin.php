@@ -111,7 +111,7 @@
 												</div>
 											</div>
 										</div>
-										<button type="submit" class="theme_button block_button color1">Log In</button>
+										<button type="submit" name="submit" class="theme_button block_button color1">Log In</button>
 									</form>
 								</div>
 								<div class="darklinks text-center topmargin_20">
