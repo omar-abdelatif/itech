@@ -85,7 +85,7 @@
 								</h4>
 								<hr class="bottommargin_30">
 								<div class="wrap-forms">
-									<form action="../admin-dashboard/core/user.php" method="post">
+									<form action="../admin-dashboard/core/register.php" method="post">
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="form-group has-placeholder">

@@ -1,8 +1,8 @@
 <?php
 //! Include Auth
-if (!isset($_SESSION['admin'])) {
-    header("location: ../../pages/error.php");
-}
+// if (!isset($_SESSION['admin'])) {
+//     header("location: ../../pages/error.php");
+// }
 //! Include Connection
 include "../config/database.php";
 //! Include Functions
@@ -11,6 +11,7 @@ include "functions.php";
 include "validations.php";
 //! Include User
 include "user.php";
+
 if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     $errors = [];
     $name = $_POST['name'];
