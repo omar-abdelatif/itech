@@ -21,6 +21,8 @@ if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($errors)) {
         insertUser($name, $email, $password);
         $_SESSION['success'] = "User Inserted Successfully";
+        header("location: ../views/pages/index.php");
+        die;
     } else {
         $_SESSION['errors'] = $errors;
         header("location: signup.php");

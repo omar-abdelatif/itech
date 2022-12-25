@@ -63,7 +63,7 @@ function deleteWithImage($id)
     $selectsql = "SELECT * FROM `users` WHERE `id` = $id";
     $rsSelect = mysqli_query($connection, $selectsql);
     $getRow = mysqli_fetch_assoc($rsSelect);
-    $path = '../assets/imgs/';
+    $path = '../assets/img/';
     $getImageName = $getRow['img'];
     $createDeletePath = $path . $getImageName;
     if (unlink($createDeletePath)) {
