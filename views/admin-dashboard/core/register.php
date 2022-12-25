@@ -5,12 +5,12 @@
 // }
 //! Include Connection
 include "../config/database.php";
+//! Include User
+include "user.php";
 //! Include Functions
 include "functions.php";
 //! Include Validations
 include "validations.php";
-//! Include User
-include "user.php";
 
 if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     $errors = [];
@@ -19,6 +19,7 @@ if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
     $cpass = $_POST['re-pass'];
     if (empty($errors)) {
+        insertUser($name, $email, $password);
         $_SESSION['success'] = "User Inserted Successfully";
     } else {
         $_SESSION['errors'] = $errors;

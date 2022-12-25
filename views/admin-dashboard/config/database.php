@@ -1,3 +1,7 @@
 <?php
 
-$connection = mysqli_connect("localhost", "root", "", "fixit");
+function connection()
+{
+    return mysqli_connect("localhost", "root", "", "fixit");
+}
+
