@@ -51,3 +51,24 @@ function getUserById($id)
     $getRow = mysqli_fetch_assoc($rsSelect);
     return $getRow;
 }
+function uploadImage($tmp_name, $location)
+{
+    if (move_uploaded_file($tmp_name, $location)) {
+        return $location;
+    }
+}
+function deleteWithImage($id)
+{
+    $connection = connection();
+    $selectsql = "SELECT * FROM `users` WHERE `id` = $id";
+    $rsSelect = mysqli_query($connection, $selectsql);
+    $getRow = mysqli_fetch_assoc($rsSelect);
+    $path = '../assets/imgs/';
+    $getImageName = $getRow['img'];
+    $createDeletePath = $path . $getImageName;
+    if (unlink($createDeletePath)) {
+        $deleteSql = "DELETE FROM `users` WHERE `id` = $id";
+        mysqli_query($connection, $deleteSql);
+        mysqli_affected_rows($connection);
+    }
+}
