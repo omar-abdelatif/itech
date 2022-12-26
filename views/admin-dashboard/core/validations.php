@@ -16,3 +16,6 @@ if (empty($email)) {
 } elseif (emailExistence($email)) {
     $errors[] = "Email Already Exist";
 }
+if ($cpass != $password) {
+    $errors[] = "Password Doesn't Match";
+}

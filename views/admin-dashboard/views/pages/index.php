@@ -1,6 +1,7 @@
 <?php
-include "views/header.php";
-include "views/nav.php";
-include "views/footer.php";
+include "../inc/header.php";
+include "../inc/nav.php";
 ?>
 <h1>Admin dashboard Page</h1>
+
+<?php include "../inc/footer.php" ?>

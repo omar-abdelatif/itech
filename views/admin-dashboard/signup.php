@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -84,6 +88,21 @@
 									Sign Up New Account
 								</h4>
 								<hr class="bottommargin_30">
+								<?php if (isset($_SESSION['errors'])) : ?>
+									<div class="alert alert-danger w-50 mx-auto mt-5 text-center">
+										<?php foreach ($_SESSION['errors'] as $error) : ?>
+											<p class="text-center p-0 m-0">
+												<?= $error ?>
+											</p>
+										<?php endforeach; ?>
+										<?php unset($_SESSION['errors']) ?>
+									</div>
+								<?php elseif (isset($_SESSION['success'])) : ?>
+									<div class="alert alert-success w-50 mx-auto mt-5 text-center">
+										<?= $_SESSION['success'] ?>
+										<?php unset($_SESSION['success']) ?>
+									</div>
+								<?php endif; ?>
 								<div class="wrap-forms">
 									<form action="../admin-dashboard/core/register.php" method="post">
 										<div class="row">
