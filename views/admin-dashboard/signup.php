@@ -1,14 +1,14 @@
 <?php
-	//! Session 
-	session_start();
-	//! Include Validations
-	include "core/validations.php";
+//! Session 
+session_start();
+//! Include Connection
+include "config/database.php";
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
-	<title>FixIt</title>
+	<title>FixIt | SignUP</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="">
@@ -91,14 +91,14 @@
 								</h4>
 								<hr class="bottommargin_30">
 								<?php if (isset($_SESSION['errors'])) : ?>
-									<div class="alert alert-danger w-50 mx-auto mt-5 text-center">
-										<?php foreach ($_SESSION['errors'] as $error) : ?>
+									<?php foreach ($_SESSION['errors'] as $error) : ?>
+										<div class="alert alert-danger w-50 mx-auto mt-5 text-center">
 											<p class="text-center p-0 m-0">
 												<?= $error ?>
 											</p>
-										<?php endforeach; ?>
-										<?php unset($_SESSION['errors']) ?>
-									</div>
+										</div>
+									<?php endforeach; ?>
+									<?php unset($_SESSION['errors']) ?>
 								<?php elseif (isset($_SESSION['success'])) : ?>
 									<div class="alert alert-success w-50 mx-auto mt-5 text-center">
 										<?= $_SESSION['success'] ?>
