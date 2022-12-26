@@ -11,3 +11,6 @@ function emailExistence($email)
         }
     }
 }
+function redirect($path){
+    header("location: $path");
+}

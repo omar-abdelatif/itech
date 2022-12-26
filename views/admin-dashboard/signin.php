@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>FixIt</title>
+	<title>FixIt | SignIn</title>
 	<meta charset="utf-8">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -84,13 +84,13 @@
 								</h4>
 								<hr class="bottommargin_30">
 								<div class="wrap-forms">
-									<form method="POST" action="../admin-dashboard/core/signin.php">
+									<form method="POST" action="core/signin.php">
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="form-group has-placeholder">
 													<label for="login-email">Email address</label>
 													<i class="grey fa fa-envelope-o"></i>
-													<input type="email" class="form-control" id="login-email" placeholder="Email Address">
+													<input type="email" class="form-control" name="email" id="login-email" placeholder="Email Address">
 												</div>
 											</div>
 										</div>
@@ -99,7 +99,7 @@
 												<div class="form-group has-placeholder">
 													<label for="login-password">Password</label>
 													<i class="grey fa fa-pencil-square-o"></i>
-													<input type="password" class="form-control" id="login-password" placeholder="Password">
+													<input type="password" class="form-control" name="password" id="login-password" placeholder="Password">
 												</div>
 											</div>
 										</div>
