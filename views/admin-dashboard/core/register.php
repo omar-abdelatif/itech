@@ -9,8 +9,6 @@ include "../config/database.php";
 include "user.php";
 //! Include Functions
 include "functions.php";
-//! Include Validations
-include "validations.php";
 
 if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     $errors = [];
