@@ -2,7 +2,7 @@
 	//! Session 
 	session_start();
 	//! Include Validations
-	include "core/register.php";
+	include "core/validations.php";
 ?>
 <!DOCTYPE html>
 <html>

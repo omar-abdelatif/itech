@@ -1,7 +1,4 @@
 <?php
-
-function connection()
-{
+function connection(){
     return mysqli_connect("localhost", "root", "", "fixit");
 }
-
