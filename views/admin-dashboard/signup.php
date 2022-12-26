@@ -1,6 +1,8 @@
 <?php
-session_start();
-
+	//! Session 
+	session_start();
+	//! Include Validations
+	include "core/register.php";
 ?>
 <!DOCTYPE html>
 <html>
