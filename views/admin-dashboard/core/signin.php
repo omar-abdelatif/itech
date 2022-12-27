@@ -17,11 +17,15 @@ if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
         $errors[] = "Email Is Required";
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors[] = "Email Is Not Valid";
+    } elseif ($email != $result['email']) {
+        $errors[] = "This Account Does't Exist";
     }
     if (empty($password)) {
         $errors[] = "Password Is Required";
     } elseif (strlen($password) < 3) {
         $errors[] = "Password Should Be Greater Than 3 Char..";
+    } elseif ($result['password'] != $password) {
+        $errors[] = "Email or Password Not Correct";
     }
     if (empty($errors)) {
         $result = selectUser($email, $password);
@@ -30,7 +34,7 @@ if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
         exit;
     } else {
         $_SESSION['errors'] = $errors;
-        redirect('signin.php');
+        redirect('../signin.php');
         exit;
     }
 }

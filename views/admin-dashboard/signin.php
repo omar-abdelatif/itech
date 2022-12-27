@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 
@@ -83,6 +84,21 @@
 									Sign In to Your Account
 								</h4>
 								<hr class="bottommargin_30">
+								<?php if (isset($_SESSION['errors'])) : ?>
+									<?php foreach ($_SESSION['errors'] as $error) : ?>
+										<div class="alert alert-danger w-50 mx-auto mt-5 text-center">
+											<p class="text-center p-0 m-0">
+												<?= $error ?>
+											</p>
+										</div>
+									<?php endforeach; ?>
+									<?php unset($_SESSION['errors']) ?>
+								<?php elseif (isset($_SESSION['success'])) : ?>
+									<div class="alert alert-success w-50 mx-auto mt-5 text-center">
+										<?= $_SESSION['success'] ?>
+										<?php unset($_SESSION['success']) ?>
+									</div>
+								<?php endif; ?>
 								<div class="wrap-forms">
 									<form method="POST" action="core/signin.php">
 										<div class="row">
