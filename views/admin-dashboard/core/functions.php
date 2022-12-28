@@ -1,4 +1,8 @@
 <?php
+function redirect($path)
+{
+    header("location: $path");
+}
 function emailExistence($email)
 {
     $connection = connection();
@@ -10,7 +14,4 @@ function emailExistence($email)
             return true;
         }
     }
-}
-function redirect($path){
-    header("location: $path");
 }

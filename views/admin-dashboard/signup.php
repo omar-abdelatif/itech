@@ -93,9 +93,7 @@ include "config/database.php";
 								<?php if (isset($_SESSION['errors'])) : ?>
 									<?php foreach ($_SESSION['errors'] as $error) : ?>
 										<div class="alert alert-danger w-50 mx-auto mt-5 text-center">
-											<p class="text-center p-0 m-0">
-												<?= $error ?>
-											</p>
+											<p class="text-center p-0 m-0"> <?= $error ?> </p>
 										</div>
 									<?php endforeach; ?>
 									<?php unset($_SESSION['errors']) ?>
