@@ -203,7 +203,7 @@ include "../inc/header.php";
             <div class="pull-right big-header-buttons">
                 <ul class="inline-dropdown inline-block">
                     <li class="nav-item">
-                        <a href="../../../../index.php" class="nav-link">View Site</a>
+                        <a href="../../../../index.php" class="nav-link text-white">View Site</a>
                     </li>
                     <li class="dropdown user-dropdown-menu">
                         <a class="header-button" id="user-dropdown-menu" data-target="#" href="./" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">

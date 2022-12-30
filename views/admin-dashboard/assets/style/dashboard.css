@@ -11,6 +11,10 @@
   /* Calendars */
 }
 
+.text-white{
+  color: #fff !important;
+}
+
 .daterangepicker.openscenter:before {
 	left: 0;
 	right: 0;
