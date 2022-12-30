@@ -5,7 +5,6 @@ include "../inc/header.php";
 <div class="preloader">
     <div class="preloader_image"></div>
 </div>
-<!-- search modal -->
 <div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">
@@ -21,7 +20,6 @@ include "../inc/header.php";
         </form>
     </div>
 </div>
-<!-- wrappers for visual page editor and boxed version of template -->
 <div id="canvas">
     <div id="box_wrapper">
         <header class="page_header_side page_header_side_sticked active-slide-side-header ds">
@@ -321,5 +319,7 @@ include "../inc/header.php";
         </section>
     </div>
 </div>
-
-<?php include "../inc/footer.php"; ?>
+<?php
+//! Include Footer
+include "../inc/footer.php";
+?>

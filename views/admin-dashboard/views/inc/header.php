@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html class="no-js">
-
 <head>
     <title>FixIt | Dashboard</title>
     <meta charset="utf-8">
@@ -15,5 +14,4 @@
     <link rel="stylesheet" href="../../assets/style/dashboard.css" class="color-switcher-link">
     <script src="../../assets/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
-
 <body class="admin">
