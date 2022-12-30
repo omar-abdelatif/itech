@@ -93,7 +93,7 @@ if (!isset($_SESSION['login'])) {
                         <h3 class="dark_bg_color">Pages</h3>
                         <ul class="menu-click">
                             <li>
-                                <a href="admin_posts.html">
+                                <a href="#">
                                     <i class="fa fa-file-text"></i>
                                     Services
                                 </a>
@@ -111,7 +111,7 @@ if (!isset($_SESSION['login'])) {
                                 </ul>
                             </li>
                             <li>
-                                <a href="admin_products.html">
+                                <a href="#">
                                     <i class="fa fa-suitcase"></i>
                                     Products
                                 </a>
@@ -122,8 +122,8 @@ if (!isset($_SESSION['login'])) {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="admin_product.html">
-                                            Single Product
+                                        <a href="../../../pages/products.php">
+                                            Add Product
                                         </a>
                                     </li>
                                 </ul>
