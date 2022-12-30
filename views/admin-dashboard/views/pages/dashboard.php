@@ -1,6 +1,12 @@
 <?php
+//! Include Session
+session_start();
 //! Include Header
 include "../inc/header.php";
+//! Include Auth Admin
+if (!isset($_SESSION['login'])) {
+    header("location: ../../../pages/error.php");
+}
 ?>
 <div class="preloader">
     <div class="preloader_image"></div>
@@ -24,9 +30,9 @@ include "../inc/header.php";
     <div id="box_wrapper">
         <header class="page_header_side page_header_side_sticked active-slide-side-header ds">
             <div class="side_header_logo ds ms">
-                <a href="admin_index.html">
+                <a href="../../views/pages/dashboard.php">
                     <span class="logo_text margin_0">
-                        Fixit
+                        Fixit | Dashboard
                     </span>
                 </a>
             </div>
@@ -35,7 +41,6 @@ include "../inc/header.php";
             </span>
             <div class="scrollbar-macosx">
                 <div class="side_header_inner">
-                    <!-- user -->
                     <div class="user-menu">
                         <ul class="menu-click">
                             <li>
@@ -45,7 +50,9 @@ include "../inc/header.php";
                                             <img src="images/team_square/01.jpg" alt="">
                                         </div>
                                         <div class="media-body media-middle">
-                                            <h4>Ann Andersen</h4>
+                                            <h4>
+                                                <?php print_r($_SESSION['login']['name']); ?>
+                                            </h4>
                                             Administrator
                                         </div>
                                     </div>
@@ -64,13 +71,7 @@ include "../inc/header.php";
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="admin_inbox.html">
-                                            <i class="fa fa-envelope-o"></i>
-                                            Inbox
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="admin_signin.html">
+                                        <a href="../../logout.php">
                                             <i class="fa fa-sign-out"></i>
                                             Log Out
                                         </a>
@@ -79,12 +80,11 @@ include "../inc/header.php";
                             </li>
                         </ul>
                     </div>
-                    <!-- main side nav start -->
                     <nav class="mainmenu_side_wrapper">
                         <h3 class="dark_bg_color">Dashboard</h3>
                         <ul class="menu-click">
                             <li>
-                                <a href="admin_index.html">
+                                <a href="../../views/pages/dashboard.php">
                                     <i class="fa fa-th-large"></i>
                                     Dashboard
                                 </a>
@@ -93,42 +93,19 @@ include "../inc/header.php";
                         <h3 class="dark_bg_color">Pages</h3>
                         <ul class="menu-click">
                             <li>
-                                <a href="#">
-                                    <i class="fa fa-user"></i>
-                                    Account
-                                </a>
-                                <ul>
-                                    <li>
-                                        <a href="admin_profile.html">
-                                            Profile
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="admin_profile_edit.html">
-                                            Edit Profile
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="admin_inbox.html">
-                                            Inbox
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
                                 <a href="admin_posts.html">
                                     <i class="fa fa-file-text"></i>
-                                    Posts
+                                    Services
                                 </a>
                                 <ul>
                                     <li>
                                         <a href="admin_posts.html">
-                                            Posts
+                                            All Services
                                         </a>
                                     </li>
                                     <li>
                                         <a href="admin_post.html">
-                                            Single Post
+                                            Add Service
                                         </a>
                                     </li>
                                 </ul>
@@ -180,7 +157,6 @@ include "../inc/header.php";
                             </li>
                         </ul>
                     </nav>
-                    <!-- eof main side nav -->
                     <div class="with_padding grey text-center">
                         10GB of
                         <strong>250GB</strong> Free
@@ -223,13 +199,7 @@ include "../inc/header.php";
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="admin_inbox.html">
-                                        <i class="fa fa-envelope-o"></i>
-                                        Inbox
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="admin_signin.html">
+                                    <a href="../../logout.php">
                                         <i class="fa fa-sign-out"></i>
                                         Log Out
                                     </a>

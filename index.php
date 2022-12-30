@@ -8,3 +8,4 @@ include "views/sections/testmonials.php";
 include "views/sections/brands.php";
 include "views/sections/contact.php";
 include "views/inc/footer.php";
+?>

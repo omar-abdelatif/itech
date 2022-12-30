@@ -27,7 +27,7 @@ if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($errors)) {
         $result = selectUser($email, $password);
         $_SESSION['login'] = $result;
-        redirect('../views/pages/index.php');
+        redirect('../views/pages/dashboard.php');
         exit;
     } else {
         $_SESSION['errors'] = $errors;

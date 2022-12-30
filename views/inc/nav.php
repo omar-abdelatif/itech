@@ -71,7 +71,7 @@
             <?php if (isset($_SESSION['login'])) : ?>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="views/admin-dashboard/views/pages/index.php" class="nav-link">My Panal</a>
+                        <a href="views/admin-dashboard/views/pages/dashboard.php" class="nav-link">My Panal</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="views/admin-dashboard/logout.php">Logout</a>
