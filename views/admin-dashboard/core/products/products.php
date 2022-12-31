@@ -1,11 +1,13 @@
 <?php
-//! Include Connection
-include "../../config/database.php";
+//! Include Auth
+if (!isset($_SESSION['login'])) {
+    header("location: ../../../pages/error.php");
+}
 
-function insertProduct($name, $price)
+function insertProduct($product_name, $product_price)
 {
     $connection = connection();
-    mysqli_query($connection, "INSERT INTO `products` (`name`, `price`) VALUES ('$name', '$price')");
+    mysqli_query($connection, "INSERT INTO `products` (`name`, `price`) VALUES ('$product_name', '$product_price')");
     $affected = mysqli_affected_rows($connection);
     if ($affected) {
         return true;
@@ -13,10 +15,10 @@ function insertProduct($name, $price)
         return false;
     }
 }
-function selectProduct($name, $price)
+function selectProduct($product_name, $product_price)
 {
     $connection = connection();
-    $query = "SELECT * FROM `products` WHERE `name` = '$name' AND `price` = '$price'";
+    $query = "SELECT * FROM `products` WHERE `name` = '$product_name' AND `price` = '$product_price'";
     $res = mysqli_query($connection, $query);
     return mysqli_fetch_assoc($res);
 }
@@ -27,7 +29,7 @@ function deleteProduct($id)
     mysqli_query($connection, $query);
     return mysqli_affected_rows($connection);
 }
-function updateProduct($id, $name, $price, $img)
+function updateProduct($id, $product_name, $product_price, $img)
 {
     $connection = connection();
     if (!empty($img)) {
@@ -35,7 +37,7 @@ function updateProduct($id, $name, $price, $img)
     } else {
         $extra = "";
     }
-    $query = "UPDATE `products` SET `name` = '$name', `price` = '$price' $extra WHERE `id` = $id";
+    $query = "UPDATE `products` SET `name` = '$product_name', `price` = '$product_price' $extra WHERE `id` = $id";
     mysqli_query($connection, $query);
     return mysqli_affected_rows($connection);
 }

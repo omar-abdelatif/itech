@@ -1,4 +1,6 @@
 <?php
+//! Include Header
+include "../inc/header.php";
 //! include Session
 session_start();
 //! Include Auth
@@ -7,8 +9,6 @@ if (!isset($_SESSION['login'])) {
 }
 //! Include Products Functions
 include "../../core/products/products.php";
-//! Include Header
-include "../inc/header.php";
 ?>
 <div class="preloader">
     <div class="preloader_image"></div>
@@ -243,10 +243,25 @@ include "../inc/header.php";
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
+                        <?php if (isset($_SESSION['errors'])) : ?>
+                            <?php foreach ($_SESSION['errors'] as $error) : ?>
+                                <div class="alert alert-danger w-50 mx-auto mt-5 text-center">
+                                    <p class="text-center p-0 m-0">
+                                        <?= $error ?>
+                                    </p>
+                                </div>
+                            <?php endforeach; ?>
+                            <?php unset($_SESSION['errors']) ?>
+                        <?php elseif (isset($_SESSION['success'])) : ?>
+                            <div class="alert alert-success w-50 mx-auto mt-5 text-center">
+                                <?= $_SESSION['success'] ?>
+                                <?php unset($_SESSION['success']) ?>
+                            </div>
+                        <?php endif; ?>
                         <form class="form-group addproduct" action="../../core/products/addproduct.php" method="post">
                             <input type="text" name="name" placeholder="Product Name" class="form-control">
                             <input type="number" name="price" placeholder="Product price" class="form-control">
-                            <button type="submit">submit</button>
+                            <button name="submit" type="submit">submit</button>
                         </form>
                     </div>
                 </div>
