@@ -10,11 +10,6 @@ include "../admin-dashboard/core/products/products.php";
     <div class="container">
         <div class="row">
             <div class="col-lg-12"></div>
-            <!-- <?php foreach() : ?> -->
-                <div class="col-lg-3">
-                    <div class="prod-item"></div>
-                </div>
-            <!-- <?php endforeach ?> -->
         </div>
     </div>
 </section>
