@@ -117,7 +117,7 @@ if (!isset($_SESSION['login'])) {
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="admin_products.html">
+                                        <a href="products.php">
                                             Products
                                         </a>
                                     </li>

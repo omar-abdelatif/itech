@@ -119,7 +119,7 @@ include "../inc/header.php";
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="admin_products.html">
+                                        <a href="products.php">
                                             Products
                                         </a>
                                     </li>
@@ -252,7 +252,6 @@ include "../inc/header.php";
                 </div>
             </div>
         </section>
-
         <?php
         //! Include Footer
         include "../inc/footer.php";
