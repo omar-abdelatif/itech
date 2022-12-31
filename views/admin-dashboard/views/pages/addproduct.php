@@ -237,19 +237,22 @@ include "../inc/header.php";
                 <div class="row">
                     <div class="col-md-4">
                         <h3 class="dashboard-page-title">Dashboard
-                            <small>Product Page</small>
+                            <small>Add Product</small>
                         </h3>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <form class="d-flex justify-content-center align-content-center w-100 h-100" action="../../core/products/addproduct.php" method="post">
-                            <h1 class="text-center">add products form</h1>
+                        <form class="form-group addproduct" action="../../core/products/addproduct.php" method="post">
+                            <input type="text" name="name" placeholder="Product Name" class="form-control">
+                            <input type="number" name="price" placeholder="Product price" class="form-control">
+                            <button type="submit">submit</button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
+
         <?php
         //! Include Footer
         include "../inc/footer.php";

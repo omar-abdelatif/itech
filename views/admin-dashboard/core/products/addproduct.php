@@ -7,3 +7,5 @@ include "../../config/database.php";
 include "../functions.php";
 
 // add product insert functions
+
+echo "hello from add product functions file";

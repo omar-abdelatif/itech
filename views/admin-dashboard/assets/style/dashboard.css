@@ -1960,7 +1960,7 @@ body.admin {
   letter-spacing: 0;
 }
 
-.admin .input[type="text"],
+.admin input[type="text"],
 .admin input[type="email"],
 .admin input[type="url"],
 .admin input[type="password"],
@@ -2592,4 +2592,15 @@ tr.item-editable .media-left img {
 
 canvas[class*='canvas-chart-line'] {
   min-height: 300px;
+}
+/* ! Add Product ! */
+.addproduct{
+  width: 50%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ccc;
+  text-align: center;
+}
+.addproduct input{
+  margin-bottom: 30px;
 }

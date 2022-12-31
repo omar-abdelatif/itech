@@ -15,6 +15,7 @@
     let year = document.getElementById("year");
     year.innerHTML = new Date().getFullYear();
 </script>
+<script src="../../assets/js/vendor/modernizr-2.6.2.min.js"></script>
 <script src="../../assets/js/compressed.js"></script>
 <script src="../../assets/js/main.js"></script>
 <!-- range picker -->
