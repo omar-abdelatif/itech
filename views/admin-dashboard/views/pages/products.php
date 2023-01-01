@@ -11,10 +11,10 @@ if (!isset($_SESSION['login'])) {
 include "../../core/products/products.php";
 $getProducts = products();
 ?>
-<!-- To Display The Product In Table In Products That Belong To Dashboard -->
 <div class="preloader">
     <div class="preloader_image"></div>
 </div>
+<!-- MODALS -->
 <div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">
@@ -245,6 +245,21 @@ $getProducts = products();
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
+                        <?php if (isset($_SESSION['errors'])) : ?>
+                            <?php foreach ($_SESSION['errors'] as $error) : ?>
+                                <div class="alert alert-danger w-50 mx-auto mt-5 text-center">
+                                    <p class="text-center p-0 m-0">
+                                        <?= $error ?>
+                                    </p>
+                                </div>
+                            <?php endforeach; ?>
+                            <?php unset($_SESSION['errors']) ?>
+                        <?php elseif (isset($_SESSION['success'])) : ?>
+                            <div class="alert alert-success w-50 mx-auto mt-5 text-center">
+                                <?= $_SESSION['success'] ?>
+                                <?php unset($_SESSION['success']) ?>
+                            </div>
+                        <?php endif; ?>
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -277,6 +292,8 @@ $getProducts = products();
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
+                                <?php else : ?>
+                                    <h1>No Product Found</h1>
                                 <?php endif; ?>
                             </tbody>
                         </table>

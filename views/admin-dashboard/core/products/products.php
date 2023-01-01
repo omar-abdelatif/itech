@@ -1,4 +1,6 @@
 <?php
+//! Start Session
+session_start();
 //! Include Auth
 if (!isset($_SESSION['login'])) {
     header("location: ../../../pages/error.php");
@@ -79,6 +81,4 @@ function deleteWithImage($id)
         mysqli_affected_rows($connection);
     }
 }
-
 ?>
-<!-- all functions for deleting and selecting and inserting to and from the database -->
