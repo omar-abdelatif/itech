@@ -2604,3 +2604,7 @@ canvas[class*='canvas-chart-line'] {
 .addproduct input{
   margin-bottom: 30px;
 }
+/* ! All Products ! */
+.text-center{
+  text-align: center !important;
+}

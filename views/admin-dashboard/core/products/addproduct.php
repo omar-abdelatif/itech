@@ -28,5 +28,3 @@ if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
         header("location: ../../views/pages/addproduct.php");
     }
 }
-
-echo "hello from add product functions file";

@@ -3,7 +3,9 @@
 if (!isset($_SESSION['login'])) {
     header("location: ../../../pages/error.php");
 }
-
+//! Connection
+include "../../config/database.php";
+//! Functions
 function insertProduct($product_name, $product_price)
 {
     $connection = connection();
