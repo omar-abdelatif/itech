@@ -1,6 +1,4 @@
 <?php
-//! Start Session
-session_start();
 //! Include Auth
 if (!isset($_SESSION['login'])) {
     header("location: ../../../pages/error.php");

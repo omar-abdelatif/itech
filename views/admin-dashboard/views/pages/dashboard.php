@@ -208,7 +208,7 @@ if (!isset($_SESSION['login'])) {
                         </div>
                     </li>
                     <li class="dropdown visible-xs-inline-block">
-                        <a href="#" class="search_modal_button header-button">
+                        <a href="#search_modal" class="search_modal_button header-button">
                             <i class="fa fa-search grey"></i>
                             <span class="header-button-text">Search</span>
                         </a>
