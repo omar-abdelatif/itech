@@ -3,13 +3,11 @@
 if (!isset($_SESSION['login'])) {
     header("location: ../../../pages/error.php");
 }
-//! Connection
-include "../../config/database.php";
 //! Functions
-function insertProduct($product_name, $product_price)
+function insertProduct($product_name, $product_price, $avatar)
 {
     $connection = connection();
-    mysqli_query($connection, "INSERT INTO `products` (`name`, `price`) VALUES ('$product_name', '$product_price')");
+    mysqli_query($connection, "INSERT INTO `products` (`name`, `price`, `img`) VALUES ('$product_name', '$product_price', '$avatar')");
     $affected = mysqli_affected_rows($connection);
     if ($affected) {
         return true;
@@ -70,7 +68,7 @@ function deleteWithImage($id)
     $selectsql = "SELECT * FROM `products` WHERE `id` = $id";
     $rsSelect = mysqli_query($connection, $selectsql);
     $getRow = mysqli_fetch_assoc($rsSelect);
-    $path = '../assets/img/';
+    $path = '../../../../assets/imgs/images/products/';
     $getImageName = $getRow['img'];
     $createDeletePath = $path . $getImageName;
     if (unlink($createDeletePath)) {

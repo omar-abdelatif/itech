@@ -1,6 +1,8 @@
 <?php
 //! include Session
 session_start();
+//! Include Connection
+include "../../config/database.php";
 //! Include Header
 include "../inc/header.php";
 //! Include Auth Admin
@@ -281,10 +283,11 @@ $getProducts = products();
                                                 <?= $product['name'] ?>
                                             </td>
                                             <td>
-                                                <?= $product['price'] ?> EGP
+                                                <?= $product['price'] ?>
+                                                <span class="currency">EGP</span>
                                             </td>
                                             <td>
-                                                Not Yet
+                                                <img width="100" src="../../../../assets/imgs/images/products/<?= $product['img'] ?>" alt="pic">
                                             </td>
                                             <td>
                                                 <a href="editproduct.php?pro_id=<?= $product['id'] ?>" class="btn btn-warning text-white">Edit</a>

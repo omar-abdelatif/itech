@@ -1,8 +1,9 @@
 <?php
-//! Include Header
-include "../inc/header.php";
 //! include Session
 session_start();
+
+//! Include Header
+include "../inc/header.php";
 //! Include Auth
 if (!isset($_SESSION['login'])) {
     header("location: ../../../pages/error.php");
@@ -258,10 +259,10 @@ include "../../core/products/products.php";
                                 <?php unset($_SESSION['success']) ?>
                             </div>
                         <?php endif; ?>
-                        <form class="form-group addproduct" action="../../core/products/addproduct.php" method="post">
+                        <form action="../../core/products/addproduct.php" method="post" class="form-group addproduct" enctype="multipart/form-data">
                             <input type="text" name="name" placeholder="Product Name" class="form-control">
                             <input type="number" name="price" placeholder="Product price" class="form-control">
-                            <input type="file" name="upload" placeholder="Product Img" class="form-control">
+                            <input type="file" name="img" placeholder="Product Img" class="form-control">
                             <button name="submit" type="submit">submit</button>
                         </form>
                     </div>

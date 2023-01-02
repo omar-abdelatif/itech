@@ -2604,16 +2604,13 @@ canvas[class*='canvas-chart-line'] {
 .addproduct input{
   margin-bottom: 30px;
 }
-input[type="file"]::-webkit-file-upload-button{
-  padding: 30px;
-  background-color: #000;
-  color: violet;
+input[type="file"]::file-selector-button {
+  padding: 7px;
+  background-color: #ccc;
+  color: #000;
+  border: none;
+  cursor: pointer;
 }
-/* input[type="file"]::file-selector-button{
-  padding: 30px;
-  background-color: #000;
-  color: violet;
-} */
 /* ! All Products ! */
 .text-center{
   text-align: center !important;

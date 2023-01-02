@@ -1,6 +1,8 @@
 <?php
 //! Start Session
 session_start();
+//! Include Connection
+include "../../config/database.php";
 //! Include Product Functions
 include "../products/products.php";
 //! Include Auth
@@ -16,7 +18,8 @@ if (isset($_GET['pro_id'])) {
         $errors[] = "Something Went Wrong";
     }
     if (empty($errors)) {
-        deleteProduct($id);
+        deleteWithImage($id);
+        // deleteProduct($id);
         $_SESSION['success'] = "Product Deleted Successfully";
         header("location: ../../views/pages/products.php");
     } else {
