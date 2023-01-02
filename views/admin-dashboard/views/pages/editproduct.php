@@ -255,7 +255,6 @@ $id = $_GET['pro_id']
                             </div>
                         <?php endif; ?>
                         <form class="form-group addproduct" action="../../core/products/editproduct.php" method="post">
-
                             <input type="text" name="name" placeholder="Product Name" class="form-control">
                             <input type="number" name="price" placeholder="Product price" class="form-control">
                             <button name="submit" type="submit">submit</button>

@@ -296,7 +296,7 @@ $getProducts = products();
                                         </tr>
                                     <?php endforeach; ?>
                                 <?php else : ?>
-                                    <h1>No Product Found</h1>
+                                    <h1 class="text-center">No Product Found</h1>
                                 <?php endif; ?>
                             </tbody>
                         </table>

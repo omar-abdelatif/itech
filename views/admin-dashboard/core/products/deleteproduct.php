@@ -13,17 +13,7 @@ if (!isset($_SESSION['login'])) {
 if (isset($_GET['pro_id'])) {
     $errors = [];
     $id = $_GET['pro_id'];
-    //! Vaidation
-    if (deleteProduct($id) == false) {
-        $errors[] = "Something Went Wrong";
-    }
-    if (empty($errors)) {
-        deleteWithImage($id);
-        // deleteProduct($id);
-        $_SESSION['success'] = "Product Deleted Successfully";
-        header("location: ../../views/pages/products.php");
-    } else {
-        $_SESSION['errors'] = $errors;
-        header("location: ../../views/pages/products.php");
-    }
+    deleteWithImage($id);
+    $_SESSION['success'] = "Product Deleted Successfully";
+    header("location: ../../views/pages/products.php");
 }
