@@ -259,10 +259,10 @@ $product = getProductById($id);
                                 <?php unset($_SESSION['success']) ?>
                             </div>
                         <?php endif; ?>
-                        <form class="form-group addproduct" action="../../core/products/editproduct.php" method="post" enctype="multipart/form-data">
-                            <input type="text" name="id" value="<?= $id ?>" class="form-control" placeholder="id">
+                        <form action="../../core/products/editproduct.php" method="post" class="form-group addproduct" enctype="multipart/form-data">
+                            <input type="hidden" name="id" value="<?= $id ?>" class="form-control" placeholder="id">
                             <input type="text" name="name" value="<?= $product['name'] ?>" placeholder="Product Name" class="form-control">
-                            <input type="number" name="price" value="<?= $product['price'] ?>" placeholder="Product price" class="form-control">
+                            <input type="number" step="0.01" min="0" max="100000" name="price" value="<?= $product['price'] ?>" placeholder="Product price" class="form-control">
                             <img src="../../../../assets/imgs/images/products/<?= $product['img'] ?>" alt="<?= $product['img'] ?>" width="200" style="margin-bottom: 20px;">
                             <input type="file" class="form-control" value="<?= $product['img'] ?>" name="img" placeholder="Product Img">
                             <button name="submit" type="submit">submit</button>
