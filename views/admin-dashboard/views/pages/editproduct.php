@@ -1,9 +1,14 @@
 <?php
 //! include Session
 session_start();
+//! Include Connection
+include "../../config/database.php";
 //! Incude Header
 include "../inc/header.php";
-$id = $_GET['pro_id']
+//! Include Product Functions
+include "../../core/products/products.php";
+$id = $_GET['pro_id'];
+$product = getProductById($id);
 ?>
 <div class="preloader">
     <div class="preloader_image"></div>
@@ -254,9 +259,12 @@ $id = $_GET['pro_id']
                                 <?php unset($_SESSION['success']) ?>
                             </div>
                         <?php endif; ?>
-                        <form class="form-group addproduct" action="../../core/products/editproduct.php" method="post">
-                            <input type="text" name="name" placeholder="Product Name" class="form-control">
-                            <input type="number" name="price" placeholder="Product price" class="form-control">
+                        <form class="form-group addproduct" action="../../core/products/editproduct.php" method="post" enctype="multipart/form-data">
+                            <input type="text" name="id" value="<?= $id ?>" class="form-control" placeholder="id">
+                            <input type="text" name="name" value="<?= $product['name'] ?>" placeholder="Product Name" class="form-control">
+                            <input type="number" name="price" value="<?= $product['price'] ?>" placeholder="Product price" class="form-control">
+                            <img src="../../../../assets/imgs/images/products/<?= $product['img'] ?>" alt="<?= $product['img'] ?>" width="200" style="margin-bottom: 20px;">
+                            <input type="file" class="form-control" value="<?= $product['img'] ?>" name="img" placeholder="Product Img">
                             <button name="submit" type="submit">submit</button>
                         </form>
                     </div>

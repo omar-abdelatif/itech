@@ -44,7 +44,7 @@ function updateProduct($id, $product_name, $product_price, $img)
 function products()
 {
     $connection = connection();
-    $query = "SELECT * FROM `products`";
+    $query = "SELECT * FROM `products` ORDER BY `id`";
     $res = mysqli_query($connection, $query);
     return mysqli_fetch_all($res, MYSQLI_ASSOC);
 }
