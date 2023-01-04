@@ -14,18 +14,16 @@ if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_POST['id'];
     $product_name = $_POST['name'];
     $product_price = $_POST['price'];
-    // $avatar = $_FILES['img']['name'];
-    $avatar = time();
+    $img = $_FILES['img']['name'];
+    $path_info = pathinfo($avatar);
+    $base_name = $path_info['filename'];
+    $extension = $path_info['extension'];
+    $timestamp = time();
     $tmp_name = $_FILES['img']['tmp_name'];
-    $type = $_FILES['img']['type'];
-    $type = explode('/', $type);
-    $extention = $type[1];
-    $base_name = pathinfo($avatar, PATHINFO_FILENAME);
-    $avatar = basename($base_name . '.' . $extention);
     $path = '../../../../assets/imgs/images/products/';
-    $location = $path . $avatar;
+    $location = $path . $img;
     uploadImage($tmp_name, $location);
-    updateProduct($id, $product_name, $product_price, $avatar);
+    updateProduct($id, $product_name, $product_price, $img);
     header("location: ../../views/pages/products.php");
     die;
 }

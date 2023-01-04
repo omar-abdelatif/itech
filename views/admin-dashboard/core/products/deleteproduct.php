@@ -11,7 +11,6 @@ if (!isset($_SESSION['login'])) {
 }
 //! Functions
 if (isset($_GET['pro_id'])) {
-    $errors = [];
     $id = $_GET['pro_id'];
     deleteWithImage($id);
     $_SESSION['success'] = "Product Deleted Successfully";
