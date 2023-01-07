@@ -30,25 +30,126 @@ button,
 textarea:focus {
 	box-shadow: none;
 }
+::selection {
+    color: #fff;
+    background-color: #54be73;
+}
 /* ! FONTS ! */
 @import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
+
 /* ! Logo ! */
-.social-icons i {
-	font-size: 40px;
-	border-radius: 50%;
-	padding: 20px;
-	color: #000;
+.small-teaser {
+line-height: 22px;
+margin-top: 8px;
 }
-.facebook:hover i {
-	color: #fff;
-	background-color: #3b5998;
+.page_toplogo .small-teaser {
+vertical-align: middle;
+display: inline-block;
 }
-.whatsapp:hover i {
-	color: #fff;
-	background-color: #27b159;
+.small-text {
+font-size: 12px;
+text-transform: uppercase;
 }
-.contact p:last-child {
-	font-size: 25px;
+.semibold {
+font-weight: 600;
+}
+.grey {
+color: #1f232b;
+border-color: #1f232b;
+}
+.highlight {
+color: #54be73;
+}
+p:last-child {
+margin-bottom: 0;
+}
+.fontsize_18 {
+font-size: 18px;
+}
+.medium {
+font-weight: 500;
+}
+.page_header .social-icon {
+margin-bottom: 0;
+}
+a.social-icon {
+color: #bebebe;
+}
+a.color-bg-icon {
+color: #fff;
+background-color: #1f232b;
+margin-bottom: 4px;
+padding: 11px 13px 12px;
+}
+a.social-icon {
+font-size: 0;
+line-height: 0;
+display: inline-block;
+text-align: center;
+vertical-align: middle;
+}
+.color-bg-icon {
+color: #fff;
+text-decoration: none;
+}
+a[class*='soc-'].rounded-icon {
+border-radius: 50%;
+}
+a[class*='soc-']:before {
+font-family: socicon;
+font-size: 14px;
+line-height: 1;
+}
+a.color-icon.soc-facebook {
+color: #507cbe;
+}
+a[class*='soc-'].soc-facebook:hover {
+color: #507cbe;
+border-color: #507cbe;
+}
+.color-bg-icon.soc-facebook,
+a.soc-facebook.bg-icon:hover,
+.soc-facebook.color-icon.border-icon:hover {
+background-color: #507cbe;
+}
+a.color-icon.soc-whatsapp {
+color: #27b159;
+}
+a[class*='soc-'].soc-whatsapp:hover {
+color: #27b159;
+border-color: #27b159;
+}
+.color-bg-icon.soc-whatsapp,
+a.soc-whatsapp.bg-icon:hover,
+.soc-whatsapp.color-icon.border-icon:hover {
+background-color: #27b159;
+}
+a.social-icon.color-icon:hover {
+color: #1f232b;
+}
+a.social-icon.bg-icon:hover {
+color: #fff;
+}
+a.color-bg-icon {
+color: #fff;
+background-color: #1f232b;
+margin-bottom: 4px;
+padding: 11px 13px 12px;
+}
+a.color-bg-icon:before {
+font-size: 12px;
+line-height: 16px;
+}
+a.social-icon.color-bg-icon:hover {
+background-color: #f2f2f2;
+}
+a.color-icon:hover {
+color: #1f232b;
+}
+a.color-icon.border-icon:hover {
+color: #fff;
+background-color: #54be73;
+border-color: transparent;
 }
 /* ! Navbar ! */
 .navbar {
@@ -63,6 +164,7 @@ textarea:focus {
 }
 .nav-link {
 	color: #fff;
+	font-weight: 700;
 }
 .nav-link:hover {
 	color: #000;

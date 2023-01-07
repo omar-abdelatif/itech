@@ -1,11 +1,10 @@
 @font-face {
-	font-family: rt-icons-2;
-	src: url(../fonts/rt-icons-23dab.eot?wz19bt);
-	src: url(../fonts/rt-icons-2d41d.eot?#iefixwz19bt)
-			format('embedded-opentype'),
-		url(../fonts/rt-icons-23dab.ttf?wz19bt) format('truetype'),
-		url(../fonts/rt-icons-23dab.woff?wz19bt) format('woff'),
-		url(../fonts/rt-icons-23dab.svg?wz19bt#rt-icons-2) format('svg');
+	font-family: 'rt-icons-2';
+	src: url(../fonts/rt-icons-23dab.eot);
+	src: url(../fonts/rt-icons-2d41d.eot) format('embedded-opentype'),
+		url(../fonts/rt-icons-23dab.ttf) format('truetype'),
+		url(../fonts/rt-icons-23dab.woff) format('woff'),
+		url(../fonts/rt-icons-23dab.svg) format('svg');
 	font-weight: 400;
 	font-style: normal;
 }
@@ -2172,10 +2171,10 @@
 @font-face {
 	font-family: socicon;
 	src: url(../fonts/socicon.eot);
-	src: url(../fonts/socicond41d.eot?#iefix) format('embedded-opentype'),
+	src: url(../fonts/socicond41d.eot) format('embedded-opentype'),
 		url(../fonts/socicon.woff) format('woff'),
 		url(../fonts/socicon.ttf) format('truetype'),
-		url(../fonts/socicon.svg#socicon) format('svg');
+		url(../fonts/socicon.svg) format('svg');
 	font-weight: 400;
 	font-style: normal;
 }
@@ -2686,14 +2685,12 @@
 * License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)*/
 @font-face {
 	font-family: fontawesome;
-	src: url(../fonts/fontawesome-webfont5b62.eot?v=4.6.3);
-	src: url(../fonts/fontawesome-webfontd41d.eot?#iefix&v=4.6.3)
-			format('embedded-opentype'),
-		url(../fonts/fontawesome-webfont5b62.woff2?v=4.6.3) format('woff2'),
-		url(../fonts/fontawesome-webfont5b62.woff?v=4.6.3) format('woff'),
-		url(../fonts/fontawesome-webfont5b62.ttf?v=4.6.3) format('truetype'),
-		url(../fonts/fontawesome-webfont5b62.svg?v=4.6.3#fontawesomeregular)
-			format('svg');
+	src: url(../fonts/fontawesome-webfont5b62.eot);
+	src: url(../fonts/fontawesome-webfontd41d.eot) format('embedded-opentype'),
+		url(../fonts/fontawesome-webfont5b62.woff2) format('woff2'),
+		url(../fonts/fontawesome-webfont5b62.woff) format('woff'),
+		url(../fonts/fontawesome-webfont5b62.ttf) format('truetype'),
+		url(../fonts/fontawesome-webfont5b62.svg) format('svg');
 	font-weight: 400;
 	font-style: normal;
 }
@@ -4887,12 +4884,11 @@
 }
 @font-face {
 	font-family: archicons;
-	src: url(../fonts/archicons4a3f.eot?3l3b66);
-	src: url(../fonts/archicons4a3f.eot?3l3b66#iefix)
-			format('embedded-opentype'),
-		url(../fonts/archicons4a3f.ttf?3l3b66) format('truetype'),
-		url(../fonts/archicons4a3f.woff?3l3b66) format('woff'),
-		url(../fonts/archicons4a3f.svg?3l3b66#archicons) format('svg');
+	src: url(../fonts/archicons4a3f.eot);
+	src: url(../fonts/archicons4a3f.eot) format('embedded-opentype'),
+		url(../fonts/archicons4a3f.ttf) format('truetype'),
+		url(../fonts/archicons4a3f.woff) format('woff'),
+		url(../fonts/archicons4a3f.svg) format('svg');
 	font-weight: 400;
 	font-style: normal;
 }

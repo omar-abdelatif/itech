@@ -14,11 +14,11 @@ if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_POST['id'];
     $product_name = $_POST['name'];
     $product_price = $_POST['price'];
-    $img = $_FILES['img']['name'];
-    $path_info = pathinfo($avatar);
-    $base_name = $path_info['filename'];
-    $extension = $path_info['extension'];
+    $avatar = $_FILES['img']['name'];
     $timestamp = time();
+    $explode = explode(".", $avatar);
+    $Ext = $explode[1];
+    $img = $timestamp . "." . $Ext;
     $tmp_name = $_FILES['img']['tmp_name'];
     $path = '../../../../assets/imgs/images/products/';
     $location = $path . $img;
