@@ -1,8 +1,4 @@
 <?php
-//! Include Auth
-if (!isset($_SESSION['login'])) {
-    header("location: ../../../pages/error.php");
-}
 //! Functions
 function insertProduct($product_name, $product_price, $avatar)
 {

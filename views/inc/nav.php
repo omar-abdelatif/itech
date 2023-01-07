@@ -29,51 +29,6 @@
     </div>
 
 </section>
-<!-- <header class="page_header header_color bordered_items">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 text-center">
-                <nav class="mainmenu_wrapper">
-                    <ul class="mainmenu nav sf-menu">
-                        <?php if (!isset($_SESSION['login'])) : ?>
-                            <li>
-                                <a href="index.php">Home</a>
-                            </li>
-                            <li>
-                                <a href="#">Services</a>
-                            </li>
-                            <li>
-                                <a href="#">Projects</a>
-                            </li>
-                            <li>
-                                <a href="#">About</a>
-                            </li>
-                            <li>
-                                <a href="#">Contact</a>
-                            </li>
-                        <?php elseif ($_SESSION['login']['email'] == 'omar@omar.com') : ?>
-                            <li>
-                                <a href="index.php">Home</a>
-                            </li>
-                            <li>
-                                <a href="#">Services</a>
-                            </li>
-                            <li>
-                                <a href="views/pages/products.php">Products</a>
-                            </li>
-                            <li>
-                                <a href="#">About</a>
-                            </li>
-                            <li>
-                                <a href="#">Contact</a>
-                            </li>
-                        <?php endif; ?>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
-</header> -->
 <nav class="navbar navbar-expand-lg bg-success">
     <div class="container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,42 +38,42 @@
             <ul class="nav justify-content-center">
                 <?php if (!isset($_SESSION['login'])) : ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link text-white border-end" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link text-white border-end" href="views/pages/services.php">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Projects</a>
+                        <a class="nav-link text-white border-end" href="views/pages/products.php">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link text-white border-end" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link text-white" href="#">Contact</a>
                     </li>
                 <?php elseif ($_SESSION['login']['email'] == 'omar@omar.com') : ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link text-white border-end" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link text-white border-end" href="views/pages/services.php">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="views/pages/products.php">Products</a>
+                        <a class="nav-link text-white border-end" href="views/pages/products.php">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link text-white border-end" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link text-white" href="#">Contact</a>
                     </li>
                 <?php endif; ?>
             </ul>
             <?php if (isset($_SESSION['login'])) : ?>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="views/admin-dashboard/views/pages/dashboard.php" class="nav-link">My Panal</a>
+                        <a href="views/admin-dashboard/views/pages/dashboard.php" class="nav-link border-end">My Panal</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="views/admin-dashboard/logout.php">Logout</a>

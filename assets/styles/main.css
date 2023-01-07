@@ -36,7 +36,6 @@ textarea:focus {
 }
 /* ! FONTS ! */
 @import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
-
 /* ! Logo ! */
 .small-teaser {
 line-height: 22px;
@@ -157,7 +156,7 @@ border-color: transparent;
 	padding-bottom: 20px;
 }
 .nav .nav-item {
-	border-right: 1px solid #333;
+	border-right: 1px solid #fff;
 }
 .nav .nav-item:last-child {
 	border-right: none;
@@ -381,6 +380,11 @@ input[type='text'] {
 	font-size: 30px;
 	color: #fff;
 }
+/* ! Products ! */
+.card{
+	border: none !important;
+}
+/* ! Services ! */
 /* ! Footer ! */
 .text-left {
 	text-align: left !important;
@@ -404,11 +408,11 @@ input[type='text'] {
 .social p {
 	font-size: 25px;
 }
-.facebook:hover a {
+.facebook a:hover {
 	background-color: #3b5998;
 	border: 2px solid #3b5998 !important;
 }
-.whatsapp:hover a {
+.whatsapp a:hover {
 	background-color: #27b159;
 	border: 2px solid #27b159 !important;
 }

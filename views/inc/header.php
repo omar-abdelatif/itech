@@ -12,14 +12,12 @@
     <link rel="shortcut icon" href="assets/imgs/fav.ico.PNG" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" />
-    <link rel="stylesheet" href="assets/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/styles/fonts.css">
-    <link rel="stylesheet" href="assets/styles/main.css" class="color-switcher-link">
+    <link rel="stylesheet" href="assets/styles/main.css">
     <script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
     <title>ITECH</title>
 </head>
 
 <body>
-    <?php include "nav.php"; ?>
