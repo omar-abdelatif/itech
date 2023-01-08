@@ -114,10 +114,18 @@ $getAllProduct = products();
             </div>
         </div>
     </nav>
-    <section class="banner">
-
-    </section>
-    <section class="products py-5">
+    <section class="products">
+        <div class="backdrop"></div>
+        <div class="banner">
+            <div class="title text-center">
+                <h1 class="text-white">Product Page</h1>
+                <p class="breadcrumbs">
+                    <a class="btn text-white" href="/">Home</a>
+                    <span class="divider text-white">/</span>
+                    <a class="btn text-white" href="../pages/products.php">Products</a>
+                </p>
+            </div>
+        </div>
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <?php foreach ($getAllProduct as $product) : ?>
