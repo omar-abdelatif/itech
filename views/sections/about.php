@@ -4,7 +4,7 @@
             <div class="col-lg-6 p-0">
                 <div class="left-side">
                     <div class="img">
-                        <img src="assets/imgs/images/slider_iphone.jpg" class="w-100" alt="">
+                        <img src="../../assets/imgs/images/events/02.jpg" alt="about img">
                     </div>
                 </div>
             </div>

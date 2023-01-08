@@ -114,17 +114,23 @@ $getAllProduct = products();
             </div>
         </div>
     </nav>
-    <section class="banner"></section>
-    <section class="products">
+    <section class="banner">
+
+    </section>
+    <section class="products py-5">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center justify-content-center">
                 <?php foreach ($getAllProduct as $product) : ?>
                     <div class="col-lg-4">
-                        <div class="card">
-                            <img src="../../assets/imgs/images/products/<?= $product['img'] ?>" class="card-img-top" alt="<?= $product['name'] ?>">
+                        <div class="card justify-content-center">
+                            <div class="card-img">
+                                <img src="../../assets/imgs/images/products/<?= $product['img'] ?>" class="card-img-top" alt="<?= $product['name'] ?>">
+                            </div>
                             <div class="card-body">
-                                <h5 class="card-title"><?= $product['name'] ?></h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h5 class="card-title text-center"><?= $product['name'] ?></h5>
+                                <p class="card-text mx-auto">
+                                    <?= $product['description'] ?>
+                                </p>
                             </div>
                         </div>
                     </div>
