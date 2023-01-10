@@ -114,18 +114,17 @@ $getAllProduct = products();
             </div>
         </div>
     </nav>
-    <section class="products">
-        <div class="backdrop"></div>
-        <div class="banner">
-            <div class="title text-center">
-                <h1 class="text-white">Product Page</h1>
-                <p class="breadcrumbs">
-                    <a class="btn text-white" href="/">Home</a>
-                    <span class="divider text-white">/</span>
-                    <a class="btn text-white" href="../pages/products.php">Products</a>
-                </p>
-            </div>
+    <section class="banner">
+        <div class="title text-center">
+            <h1 class="text-white">Product Page</h1>
+            <p class="breadcrumbs">
+                <a class="btn text-white" href="/">Home</a>
+                <span class="divider text-white">/</span>
+                <a class="btn text-white" href="../pages/products.php">Products</a>
+            </p>
         </div>
+    </section>
+    <section class="products py-5">
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <?php foreach ($getAllProduct as $product) : ?>
@@ -242,7 +241,7 @@ $getAllProduct = products();
             speed: 700,
         })
     </script>
-    <script src="assets/js/custom.js"></script>
+    <script src="../../ assets/js/custom.js"></script>
 </body>
 
 </html>
