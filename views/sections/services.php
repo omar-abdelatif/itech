@@ -38,6 +38,6 @@
                 </div>
             </div>
         </div>
-        <a href="<?php __DIR__ ?>/views/pages/services.php" class="more btn btn-primary mt-5">View More</a>
+        <a href="views/pages/services.php" class="more btn btn-primary mt-5">View More</a>
     </div>
 </section>

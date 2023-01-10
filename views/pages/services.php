@@ -115,7 +115,7 @@ include "../admin-dashboard/core/services/allservices.php";
         </div>
     </nav>
     <section class="banner bg-primary d-flex align-items-center justify-content-center text-white"></section>
-    <section>
+    <section class="service py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
