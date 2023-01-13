@@ -1,7 +1,6 @@
 <?php
 //! include Session
 session_start();
-
 //! Include Header
 include "../inc/header.php";
 //! Include Auth
@@ -238,7 +237,7 @@ include "../../core/products/products.php";
                 <div class="row">
                     <div class="col-md-4">
                         <h3 class="dashboard-page-title">Dashboard
-                            <small>Add Product</small>
+                            <small>Add Services</small>
                         </h3>
                     </div>
                 </div>
@@ -259,11 +258,11 @@ include "../../core/products/products.php";
                                 <?php unset($_SESSION['success']) ?>
                             </div>
                         <?php endif; ?>
-                        <form action="../../core/products/addproduct.php" method="post" class="form-group addproduct" enctype="multipart/form-data">
-                            <input type="text" name="name" placeholder="Product Name" class="form-control">
-                            <input type="file" name="img" placeholder="Product Img" class="form-control">
-                            <textarea name="description" cols="30" rows="10" class="form-control" placeholder="Services Description"></textarea>
-                            <button name="submit" type="submit">submit</button>
+                        <form action="../../core/services/addservices.php" method="post" class="form-group addservice" enctype="multipart/form-data">
+                            <input type="text" name="name" placeholder="Services Name" class="form-control">
+                            <input type="file" name="img" placeholder="Services Img" class="form-control">
+                            <textarea name="description" cols="30" rows="5" class="form-control" placeholder="Services Description"></textarea>
+                            <button name="submit" type="submit">Submit</button>
                         </form>
                     </div>
                 </div>

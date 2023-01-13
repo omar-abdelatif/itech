@@ -93,25 +93,25 @@ if (!isset($_SESSION['login'])) {
                         <h3 class="dark_bg_color">Pages</h3>
                         <ul class="menu-click">
                             <li>
-                                <a href="#">
+                                <a href="">
                                     <i class="fa fa-file-text"></i>
                                     Services
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="admin_posts.html">
+                                        <a href="">
                                             All Services
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="admin_post.html">
+                                        <a href="addservices.php">
                                             Add Service
                                         </a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="">
                                     <i class="fa fa-suitcase"></i>
                                     Products
                                 </a>

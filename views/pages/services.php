@@ -6,7 +6,7 @@ include "../admin-dashboard/config/database.php";
 //! Include Services Functions
 include "../admin-dashboard/core/services/allservices.php";
 //! Services Function
-// $getServices = services();
+$getServices = services();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -118,16 +118,25 @@ include "../admin-dashboard/core/services/allservices.php";
     <section class="service py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                <?php foreach ($getServices as $service) : ?>
+                    <div class="col-lg-4">
+                        <div class="card justify-content-center">
+                            <div class="card-img mx-auto" style="background-image: url(../../assets/imgs/images/services/<?= $services['img'] ?>);"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <?= $services['name'] ?>
+                                </h5>
+                                <p class="card-desc me-auto">
+                                    <?= $services['description'] ?>
+                                </p>
+                                <p class="service-price mt-3 ">
+                                    <?= $services['price'] ?>
+                                    <span class="currency">EGP</span>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php endforeach ?>
             </div>
         </div>
 

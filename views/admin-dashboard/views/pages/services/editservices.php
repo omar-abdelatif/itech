@@ -12,7 +12,7 @@ include "../inc/header.php";
 //! Include Product Functions
 include "../../core/products/products.php";
 $id = $_GET['pro_id'];
-$product = getProductById($id);
+$service = getServiceById($id);
 ?>
 <div class="preloader">
     <div class="preloader_image"></div>

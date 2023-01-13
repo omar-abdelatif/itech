@@ -130,12 +130,7 @@ $getAllProduct = products();
                 <?php foreach ($getAllProduct as $product) : ?>
                     <div class="col-lg-4">
                         <div class="card justify-content-center">
-                            <div class="card-img mx-auto" style="
-                            background-image: url(../../assets/imgs/images/products/<?= $product['img'] ?>);
-                            ">
-                                <!-- <img src="https://www.corsair.com/corsairmedia/sys_master/productcontent/CH-9300011-NA-M65_PRO_RGB_BLK_04.png" class="card-img-top" alt="<?= $product['name'] ?>"> -->
-                                <!-- <img src="../../../assets/imgs/images/products/<?= $product['img'] ?>" class="card-img-top" alt="<?= $product['name'] ?>"> -->
-                            </div>
+                            <div class="card-img mx-auto" style="background-image: url(../../assets/imgs/images/products/<?= $product['img'] ?>);"></div>
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <?= $product['name'] ?>
