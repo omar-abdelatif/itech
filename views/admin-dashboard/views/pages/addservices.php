@@ -261,8 +261,8 @@ include "../../core/products/products.php";
                         <?php endif; ?>
                         <form action="../../core/products/addproduct.php" method="post" class="form-group addproduct" enctype="multipart/form-data">
                             <input type="text" name="name" placeholder="Product Name" class="form-control">
-                            <input type="number" name="price" step="0.01" min="1" max="1000000" placeholder="Product price" class="form-control">
                             <input type="file" name="img" placeholder="Product Img" class="form-control">
+                            <textarea name="description" cols="30" rows="10" class="form-control" placeholder="Services Description"></textarea>
                             <button name="submit" type="submit">submit</button>
                         </form>
                     </div>

@@ -42,11 +42,19 @@ textarea:focus {
 	border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-	background: linear-gradient(210deg, rgba(25,135,84,1) 0%, rgba(64,102,177,1) 100%);
+	background: linear-gradient(
+		210deg,
+		rgba(25, 135, 84, 1) 0%,
+		rgba(64, 102, 177, 1) 100%
+	);
 	border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-	background: linear-gradient(210deg, rgba(64,102,177,1) 0%, rgba(25,135,84,1) 100%);
+	background: linear-gradient(
+		210deg,
+		rgba(64, 102, 177, 1) 0%,
+		rgba(25, 135, 84, 1) 100%
+	);
 }
 img {
 	width: 100%;
@@ -433,17 +441,76 @@ input[type='text'] {
 	z-index: 4;
 }
 .card {
+	position: relative;
 	border: none !important;
+	width: auto;
+	height: 400px;
+	background: #4066b1;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.card::before {
+	content: '';
+	position: absolute;
+	top: -50%;
+	width: 100%;
+	height: 100%;
+	background: #14b768;
+	transform: skewY(345deg);
+	transition: 0.5s;
+}
+.card:hover::before {
+	top: -70%;
+	transform: skewY(390deg);
+}
+.card::after {
+	content: 'CORSAIR';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-weight: 600;
+	font-size: 6em;
+	color: rgba(0, 0, 0, 0.1);
 }
 .card-img {
-	text-align: center;
-	margin-bottom: 15px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 20px;
+	z-index: 1;
+	margin-top: 60px;
+	width: 150px;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-origin: border-box;
 }
 .card-body {
 	padding: 0;
+	position: relative;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	z-index: 2;
 }
-.card-text {
+.card-title {
+	font-size: 18px;
+	color: white;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.card-desc {
 	width: 80%;
+}
+.product-price {
+	font-weight: bold;
+	font-size: 20px;
+	color: #fff;
 }
 /* ! Services Page ! */
 /* ! Footer ! */
