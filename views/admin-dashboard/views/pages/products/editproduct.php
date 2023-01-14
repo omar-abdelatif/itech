@@ -2,15 +2,15 @@
 //! include Session
 session_start();
 //! Include Connection
-include "../../config/database.php";
+include "../../../config/database.php";
 //! Include Auth
 if (!isset($_SESSION['login'])) {
-    header("location: ../../../pages/error.php");
+    header("location: ../../../../pages/error.php");
 }
 //! Incude Header
-include "../inc/header.php";
+include "../../inc/header.php";
 //! Include Product Functions
-include "../../core/products/products.php";
+include "../../../core/products/products.php";
 $id = $_GET['pro_id'];
 $product = getProductById($id);
 ?>
@@ -106,12 +106,12 @@ $product = getProductById($id);
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="admin_posts.html">
+                                        <a href="../services/services.php">
                                             All Services
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="admin_post.html">
+                                        <a href="../services/addservices.php">
                                             Add Service
                                         </a>
                                     </li>
@@ -263,11 +263,11 @@ $product = getProductById($id);
                                 <?php unset($_SESSION['success']) ?>
                             </div>
                         <?php endif; ?>
-                        <form action="../../core/products/editproduct.php" method="post" class="form-group addproduct" enctype="multipart/form-data">
+                        <form action="../../../core/products/editproduct.php" method="post" class="form-group addproduct" enctype="multipart/form-data">
                             <input type="hidden" name="id" value="<?= $id ?>" class="form-control" placeholder="id">
                             <input type="text" name="name" value="<?= $product['name'] ?>" placeholder="Product Name" class="form-control">
                             <input type="number" step="0.01" min="1" max="1000000" name="price" value="<?= $product['price'] ?>" placeholder="Product price" class="form-control">
-                            <img src="../../../../assets/imgs/images/products/<?= $product['img'] ?>" alt="<?= $product['img'] ?>" width="200" style="margin-bottom: 20px;">
+                            <img src="../../../../../assets/imgs/images/products/<?= $product['img'] ?>" alt="<?= $product['img'] ?>" width="200" style="margin-bottom: 20px;">
                             <input type="file" class="form-control" value="<?= $product['img'] ?>" name="img" placeholder="Product Img">
                             <button name="submit" type="submit">submit</button>
                         </form>
@@ -277,7 +277,7 @@ $product = getProductById($id);
         </section>
         <?php
         //! Include Footer
-        include "../inc/footer.php";
+        include "../../inc/footer.php";
         ?>
     </div>
 </div>

@@ -2,15 +2,15 @@
 //! include Session
 session_start();
 //! Include Connection
-include "../../config/database.php";
+include "../../../config/database.php";
 //! Include Header
-include "../inc/header.php";
+include "../../inc/header.php";
 //! Include Auth Admin
 if (!isset($_SESSION['login'])) {
-    header("location: ../../../pages/error.php");
+    header("location: ../../../../pages/error.php");
 }
 //! Include Products Functions
-include "../../core/products/products.php";
+include "../../../core/products/products.php";
 $getProducts = products();
 ?>
 <div class="preloader">
@@ -287,11 +287,11 @@ $getProducts = products();
                                                 <span class="currency">EGP</span>
                                             </td>
                                             <td>
-                                                <img width="100" src="../../../../assets/imgs/images/products/<?= $product['img'] ?>" alt="pic">
+                                                <img width="100" src="../../../../../assets/imgs/images/products/<?= $product['img'] ?>" alt="pic">
                                             </td>
                                             <td>
                                                 <a href="editproduct.php?pro_id=<?= $product['id'] ?>" class="btn btn-warning text-white">Edit</a>
-                                                <a href="../../core/products/deleteproduct.php?pro_id=<?= $product['id'] ?>" class="btn btn-danger text-white">Delete</a>
+                                                <a href="../../../core/products/deleteproduct.php?pro_id=<?= $product['id'] ?>" class="btn btn-danger text-white">Delete</a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
@@ -306,7 +306,7 @@ $getProducts = products();
         </section>
         <?php
         //! Include Footer
-        include "../inc/footer.php";
+        include "../../inc/footer.php";
         ?>
     </div>
 </div>

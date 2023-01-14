@@ -99,12 +99,12 @@ if (!isset($_SESSION['login'])) {
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="">
+                                        <a href="services/services.php">
                                             All Services
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="addservices.php">
+                                        <a href="services/addservices.php">
                                             Add Service
                                         </a>
                                     </li>
@@ -117,12 +117,12 @@ if (!isset($_SESSION['login'])) {
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="products.php">
+                                        <a href="products/products.php">
                                             Products
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="addproduct.php">
+                                        <a href="products/addproduct.php">
                                             Add Product
                                         </a>
                                     </li>

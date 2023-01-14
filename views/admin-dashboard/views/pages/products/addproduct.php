@@ -1,15 +1,14 @@
 <?php
 //! include Session
 session_start();
-
 //! Include Header
-include "../inc/header.php";
+include "../../inc/header.php";
 //! Include Auth
 if (!isset($_SESSION['login'])) {
-    header("location: ../../../pages/error.php");
+    header("location: ../../../../pages/error.php");
 }
 //! Include Products Functions
-include "../../core/products/products.php";
+include "../../../core/products/products.php";
 ?>
 <div class="preloader">
     <div class="preloader_image"></div>
@@ -102,12 +101,12 @@ include "../../core/products/products.php";
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="admin_posts.html">
+                                        <a href="../services/services.php">
                                             All Services
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="admin_post.html">
+                                        <a href="../services/addservices.php">
                                             Add Service
                                         </a>
                                     </li>
@@ -259,7 +258,7 @@ include "../../core/products/products.php";
                                 <?php unset($_SESSION['success']) ?>
                             </div>
                         <?php endif; ?>
-                        <form action="../../core/products/addproduct.php" method="post" class="form-group addproduct" enctype="multipart/form-data">
+                        <form action="../../../core/products/addproduct.php" method="post" class="form-group addproduct" enctype="multipart/form-data">
                             <input type="text" name="name" placeholder="Product Name" class="form-control">
                             <input type="number" name="price" step="0.01" min="1" max="1000000" placeholder="Product price" class="form-control">
                             <input type="file" name="img" placeholder="Product Img" class="form-control">
@@ -271,7 +270,7 @@ include "../../core/products/products.php";
         </section>
         <?php
         //! Include Footer
-        include "../inc/footer.php";
+        include "../../inc/footer.php";
         ?>
     </div>
 </div>
