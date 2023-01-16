@@ -12,6 +12,7 @@ if (!isset($_SESSION['login'])) {
 //! Include Products Functions
 include "../../../core/products/products.php";
 $getProducts = products();
+$i = 1;
 ?>
 <div class="preloader">
     <div class="preloader_image"></div>
@@ -277,7 +278,7 @@ $getProducts = products();
                                     <?php foreach ($getProducts as $product) : ?>
                                         <tr class="text-center">
                                             <td>
-                                                <?= $product['id'] ?>
+                                                <?= $i++ ?>
                                             </td>
                                             <td>
                                                 <?= $product['name'] ?>
