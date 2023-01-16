@@ -1,16 +1,18 @@
 <?php
 //! include Session
-session_start();
+if (session_status() == PHP_SESSION_NONE) session_start();
+//! Incude Functions
+include "../../../core/functions.php";
 //! Include Connection
-include "../../../config/database.php";
-//! Include Auth
+include INCLUDEURL . "views/admin-dashboard/config/database.php";
+//! Include Header
+include INCLUDEURL . "views/admin-dashboard/views/inc/header.php";
+//! Include Auth Admin
 if (!isset($_SESSION['login'])) {
-    header("location: ../../../../pages/error.php");
+    header("location:" . ERROR . "pages/error.php");
 }
-//! Incude Header
-include "../../inc/header.php";
-//! Include Product Functions
-include "../../../core/products/products.php";
+//! Include Products Functions
+include INCLUDEURL . "views/admin-dashboard/core/products/products.php";
 $id = $_GET['pro_id'];
 $product = getProductById($id);
 ?>

@@ -1,11 +1,13 @@
 <?php
 //! Include Session
-session_start();
+if (session_status() == PHP_SESSION_NONE) session_start();
+//! Incude Functions
+include "../../core/functions.php";
 //! Include Header
-include "../inc/header.php";
+include INCLUDEURL . "views/admin-dashboard/views/inc/header.php";
 //! Include Auth Admin
 if (!isset($_SESSION['login'])) {
-    header("location: ../../../pages/error.php");
+    header("location:" . ERROR . "views/pages/error.php");
 }
 ?>
 <div class="preloader">
@@ -84,7 +86,7 @@ if (!isset($_SESSION['login'])) {
                         <h3 class="dark_bg_color">Dashboard</h3>
                         <ul class="menu-click">
                             <li>
-                                <a href="../../views/pages/dashboard.php">
+                                <a href="<?= URL . "views/admin-dashboard/views/pages/dashboard.php" ?>">
                                     <i class="fa fa-th-large"></i>
                                     Dashboard
                                 </a>
@@ -99,12 +101,12 @@ if (!isset($_SESSION['login'])) {
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="services/services.php">
+                                        <a href="<?= URL . "views/admin-dashboard/views/pages/services/services.php" ?>">
                                             All Services
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="services/addservices.php">
+                                        <a href="<?= URL . "views/admin-dashboard/views/pages/services/addservices.php" ?>">
                                             Add Service
                                         </a>
                                     </li>
@@ -117,12 +119,12 @@ if (!isset($_SESSION['login'])) {
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="products/products.php">
+                                        <a href="<?= URL . "views/admin-dashboard/views/pages/products/products.php" ?>">
                                             Products
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="products/addproduct.php">
+                                        <a href="<?= URL . "views/admin-dashboard/views/pages/products/addproduct.php" ?>">
                                             Add Product
                                         </a>
                                     </li>
@@ -177,7 +179,7 @@ if (!isset($_SESSION['login'])) {
             <div class="pull-right big-header-buttons">
                 <ul class="inline-dropdown inline-block">
                     <li class="nav-item">
-                        <a href="../../../../index.php" class="nav-link text-white">View Site</a>
+                        <a href="<?= URL . "index.php" ?>" class="nav-link text-white">View Site</a>
                     </li>
                     <li class="dropdown user-dropdown-menu">
                         <a class="header-button" id="user-dropdown-menu" data-target="#" href="./" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
@@ -199,7 +201,7 @@ if (!isset($_SESSION['login'])) {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="../../logout.php">
+                                    <a href="<?= URL . "views/admin-dashboard/logout.php" ?>">
                                         <i class="fa fa-sign-out"></i>
                                         Log Out
                                     </a>
@@ -222,7 +224,7 @@ if (!isset($_SESSION['login'])) {
                     <div class="col-md-6">
                         <ol class="breadcrumb darklinks">
                             <li>
-                                <a href="#">Homepage</a>
+                                <a href="<?= URL . "index.php" ?>">Homepage</a>
                             </li>
                             <li class="active">Dashboard</li>
                         </ol>
@@ -277,7 +279,7 @@ if (!isset($_SESSION['login'])) {
         </section>
         <?php
         //! Include Footer
-        include "../inc/footer.php";
+        include INCLUDEURL . "views/admin-dashboard/views/inc/footer.php";;
         ?>
     </div>
 </div>

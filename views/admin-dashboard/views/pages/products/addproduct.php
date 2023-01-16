@@ -1,6 +1,8 @@
 <?php
-//! include Session
-session_start();
+        //! include Session
+        if (session_status() == PHP_SESSION_NONE) session_start();
+        //! Include Functions
+        include "../../../core/functions.php";
 //! Include Header
 include "../../inc/header.php";
 //! Include Auth
