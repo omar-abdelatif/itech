@@ -9,21 +9,6 @@ include INCLUDEURL . "views/admin-dashboard/views/inc/header.php";
 <div class="preloader">
 	<div class="preloader_image"></div>
 </div>
-<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
-	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		<span aria-hidden="true">
-			<i class="rt-icon2-cross2"></i>
-		</span>
-	</button>
-	<div class="widget widget_search">
-		<form method="get" class="searchform search-form form-inline" action="https://html.modernwebtemplates.com/fixit/">
-			<div class="form-group">
-				<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
-			</div>
-			<button type="submit" class="theme_button">Search</button>
-		</form>
-	</div>
-</div>
 <div id="canvas">
 	<div id="box_wrapper">
 		<section class="ls section_padding_top_100 section_padding_bottom_100 section_full_height">

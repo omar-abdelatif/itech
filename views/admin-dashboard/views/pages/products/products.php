@@ -175,7 +175,7 @@ $i = 1;
         </header>
         <header class="page_header header_darkgrey">
             <div class="widget widget_search">
-                <form method="get" class="searchform form-inline" action="https://html.modernwebtemplates.com/fixit/">
+                <form method="get" class="searchform form-inline" action="<?= URL . "views/admin-dashboard/core/search.php" ?>">
                     <div class="form-group">
                         <label class="screen-reader-text" for="widget-search-header">Search for:</label>
                         <input id="widget-search-header" type="text" name="search" class="form-control" placeholder="Search">
