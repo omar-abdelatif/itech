@@ -80,7 +80,7 @@ $i = 1;
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../../logout.php">
+                                        <a href="<?= URL . "views/admin-dashboard/logout.php" ?>">
                                             <i class="fa fa-sign-out"></i>
                                             Log Out
                                         </a>
@@ -186,7 +186,7 @@ $i = 1;
             <div class="pull-right big-header-buttons">
                 <ul class="inline-dropdown inline-block">
                     <li class="nav-item">
-                        <a href="../../../../index.php" class="nav-link text-white">View Site</a>
+                        <a href="<?= URL . "index.php" ?>" class="nav-link text-white">View Site</a>
                     </li>
                     <li class="dropdown user-dropdown-menu">
                         <a class="header-button" id="user-dropdown-menu" data-target="#" href="./" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
@@ -208,7 +208,7 @@ $i = 1;
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="../../logout.php">
+                                    <a href="<?= URL . "views/admin-dashboard/logout.php" ?>">
                                         <i class="fa fa-sign-out"></i>
                                         Log Out
                                     </a>

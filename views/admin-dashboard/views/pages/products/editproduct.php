@@ -39,7 +39,7 @@ $product = getProductById($id);
     <div id="box_wrapper">
         <header class="page_header_side page_header_side_sticked active-slide-side-header ds">
             <div class="side_header_logo ds ms">
-                <a href="../../views/pages/dashboard.php">
+                <a href="<?= URL . "views/admin-dashboard/views/pages/dashboard.php" ?>">
                     <span class="logo_text margin_0">
                         Fixit | Dashboard
                     </span>
@@ -80,7 +80,7 @@ $product = getProductById($id);
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../../logout.php">
+                                        <a href="<?= URL . "views/admin-dashboard/logout.php" ?>">
                                             <i class="fa fa-sign-out"></i>
                                             Log Out
                                         </a>
@@ -93,7 +93,7 @@ $product = getProductById($id);
                         <h3 class="dark_bg_color">Dashboard</h3>
                         <ul class="menu-click">
                             <li>
-                                <a href="../../views/pages/dashboard.php">
+                                <a href="<?= URL . "views/admin-dashboard/views/pages/dashboard.php" ?>">
                                     <i class="fa fa-th-large"></i>
                                     Dashboard
                                 </a>
@@ -108,12 +108,12 @@ $product = getProductById($id);
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="../services/services.php">
+                                        <a href="<?= URL . "views/admin-dashboard/views/pages/services/services.php" ?>">
                                             All Services
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../services/addservices.php">
+                                        <a href="<?= URL . "views/admin-dashboard/views/pages/services/addservices.php" ?>">
                                             Add Service
                                         </a>
                                     </li>
@@ -126,12 +126,12 @@ $product = getProductById($id);
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="products.php">
+                                        <a href="<?= URL . "views/admin-dashboard/views/pages/products/products.php" ?>">
                                             Products
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="addproduct.php">
+                                        <a href="<?= URL . "views/admin-dashboard/views/pages/products/addproduct.php" ?>">
                                             Add Product
                                         </a>
                                     </li>
@@ -186,7 +186,7 @@ $product = getProductById($id);
             <div class="pull-right big-header-buttons">
                 <ul class="inline-dropdown inline-block">
                     <li class="nav-item">
-                        <a href="../../../../index.php" class="nav-link text-white">View Site</a>
+                        <a href="<?= URL . "index.php" ?>" class="nav-link text-white">View Site</a>
                     </li>
                     <li class="dropdown user-dropdown-menu">
                         <a class="header-button" id="user-dropdown-menu" data-target="#" href="./" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
@@ -208,7 +208,7 @@ $product = getProductById($id);
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="../../logout.php">
+                                    <a href="<?= URL . "views/admin-dashboard/logout.php" ?>">
                                         <i class="fa fa-sign-out"></i>
                                         Log Out
                                     </a>
@@ -231,7 +231,7 @@ $product = getProductById($id);
                     <div class="col-md-6">
                         <ol class="breadcrumb darklinks">
                             <li>
-                                <a href="#">Homepage</a>
+                                <a href="<?= URL . "index.php" ?>">Homepage</a>
                             </li>
                             <li class="active">Dashboard</li>
                         </ol>
@@ -265,11 +265,11 @@ $product = getProductById($id);
                                 <?php unset($_SESSION['success']) ?>
                             </div>
                         <?php endif; ?>
-                        <form action="../../../core/products/editproduct.php" method="post" class="form-group addproduct" enctype="multipart/form-data">
+                        <form action="<?= URL . "views/admin-dashboard/core/products/editproduct.php" ?>" method="post" class="form-group addproduct" enctype="multipart/form-data">
                             <input type="hidden" name="id" value="<?= $id ?>" class="form-control" placeholder="id">
                             <input type="text" name="name" value="<?= $product['name'] ?>" placeholder="Product Name" class="form-control">
                             <input type="number" step="0.01" min="1" max="1000000" name="price" value="<?= $product['price'] ?>" placeholder="Product price" class="form-control">
-                            <img src="../../../../../assets/imgs/images/products/<?= $product['img'] ?>" alt="<?= $product['img'] ?>" width="200" style="margin-bottom: 20px;">
+                            <img src="<?= URL . 'assets/imgs/images/products/' ?><?= $product['img'] ?>" alt="<?= $product['img'] ?>" width="200" style="margin-bottom: 20px;">
                             <input type="file" class="form-control" value="<?= $product['img'] ?>" name="img" placeholder="Product Img">
                             <button name="submit" type="submit">submit</button>
                         </form>
@@ -279,7 +279,7 @@ $product = getProductById($id);
         </section>
         <?php
         //! Include Footer
-        include "../../inc/footer.php";
+        include INCLUDEURL . "views/admin-dashboard/views/inc/footer.php";
         ?>
     </div>
 </div>

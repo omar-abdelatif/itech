@@ -73,7 +73,7 @@ if (!isset($_SESSION['login'])) {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../../logout.php">
+                                        <a href="<?= URL . "views/admin-dashboard/logout.php" ?>">
                                             <i class="fa fa-sign-out"></i>
                                             Log Out
                                         </a>
