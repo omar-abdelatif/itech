@@ -7,7 +7,7 @@ include "../../../core/functions.php";
 include INCLUDEURL . "views/admin-dashboard/views/inc/header.php";
 //! Include Auth
 if (!isset($_SESSION['login'])) {
-    header("location:" . ERROR . "pages/error.php");
+    redirect("location:" . ERROR . "pages/error.php");
 }
 //! Include Products Functions
 include INCLUDEURL . "views/admin-dashboard/core/products/products.php";

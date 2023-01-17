@@ -1,9 +1,9 @@
 <?php
 //! Start Session
-session_start();
+if (session_status() == PHP_SESSION_NONE) session_start();
 //! Include Functions
 include "core/functions.php";
 //! Destroy Session
 session_destroy();
 //! Redirect
-redirect('signin.php');
+redirect(ERROR . 'views/admin-dashboard/signin.php');

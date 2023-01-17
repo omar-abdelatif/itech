@@ -1,6 +1,6 @@
 <?php
 //! Session 
-session_start();
+if (session_status() == PHP_SESSION_NONE) session_start();
 //! Include Connection
 include "config/database.php";
 ?>

@@ -9,7 +9,7 @@ include INCLUDEURL . "views/admin-dashboard/config/database.php";
 include INCLUDEURL . "views/admin-dashboard/views/inc/header.php";
 //! Include Auth Admin
 if (!isset($_SESSION['login'])) {
-    header("location:" . ERROR . "pages/error.php");
+    redirect(ERROR . "pages/error.php");
 }
 //! Include Products Functions
 include INCLUDEURL . "views/admin-dashboard/core/products/products.php";
