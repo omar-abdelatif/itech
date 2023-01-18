@@ -14,6 +14,7 @@ if (!isset($_SESSION['login'])) {
 //! Include Products Functions
 include INCLUDEURL . "views/admin-dashboard/core/services/allservices.php";
 $getServices = services();
+$i = 1;
 ?>
 <div class="preloader">
     <div class="preloader_image"></div>
@@ -268,8 +269,8 @@ $getServices = services();
                             <thead>
                                 <tr>
                                     <th class="text-center">#</th>
-                                    <th class="text-center">Product Name</th>
-                                    <th class="text-center">Product Price</th>
+                                    <th class="text-center">Service Name</th>
+                                    <th class="text-center">Service Price</th>
                                     <th class="text-center">IMG</th>
                                     <th class="text-center">Action</th>
                                 </tr>
@@ -279,7 +280,7 @@ $getServices = services();
                                     <?php foreach ($getServices as $services) : ?>
                                         <tr class="text-center">
                                             <td>
-                                                <?= $services['id'] ?>
+                                                <?= $i++ ?>
                                             </td>
                                             <td>
                                                 <?= $services['name'] ?>
@@ -289,11 +290,11 @@ $getServices = services();
                                                 <span class="currency">EGP</span>
                                             </td>
                                             <td>
-                                                <img width="100" src="../../../../assets/imgs/images/products/<?= $services['img'] ?>" alt="pic">
+                                                <img width="100" src="<?= URL . 'assets/imgs/images/services/' ?><?= $services["img"] ?> " alt="<?= $services['name'] ?>">
                                             </td>
                                             <td>
-                                                <a href="editproduct.php?service_id=<?= $product['id'] ?>" class="btn btn-warning text-white">Edit</a>
-                                                <a href="../../core/products/deleteproduct.php?service_id=<?= $services['id'] ?>" class="btn btn-danger text-white">Delete</a>
+                                                <a href="<?= URL ?>views/admin-dashboard/views/pages/services/editservice.php?service_id=<?= $services['id'] ?>" class="btn btn-warning text-white">Edit</a>
+                                                <a href="<?= URL ?>views/admin-dashboard/views/pages/services/deleteproduct.php?service_id=<?= $services['id'] ?>" class="btn btn-danger text-white">Delete</a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

@@ -271,7 +271,7 @@ $service = getServiceById($id);
                             <input type="number" step="0.01" min="1" max="1000000" name="price" value="<?= $service['price'] ?>" placeholder="Product price" class="form-control">
                             <img src="<?= URL . 'assets/imgs/images/services/' ?><?= $service['img'] ?>" alt="<?= $service['img'] ?>" width="200" style="margin-bottom: 20px;">
                             <input type="file" class="form-control" value="<?= $service['img'] ?>" name="img" placeholder="Product Img">
-                            <button name="submit" type="submit">submit</button>
+                            <button name="submit" class="mt-3" type="submit">submit</button>
                         </form>
                     </div>
                 </div>
