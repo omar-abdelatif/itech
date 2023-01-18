@@ -1,17 +1,19 @@
 <?php
 //! include Session
-session_start();
+if (session_status() == PHP_SESSION_NONE) session_start();
+//! Incude Functions
+include "../../../core/functions.php";
 //! Include Connection
-include "../../config/database.php";
+include INCLUDEURL . "views/admin-dashboard/config/database.php";
 //! Include Header
-include "../inc/header.php";
+include INCLUDEURL . "views/admin-dashboard/views/inc/header.php";
 //! Include Auth Admin
 if (!isset($_SESSION['login'])) {
-    header("location: ../../../pages/error.php");
+    redirect(ERROR . "pages/error.php");
 }
 //! Include Products Functions
-include "../../core/products/products.php";
-$getProducts = products();
+include INCLUDEURL . "views/admin-dashboard/core/services/allservices.php";
+$getServices = services();
 ?>
 <div class="preloader">
     <div class="preloader_image"></div>
@@ -36,7 +38,7 @@ $getProducts = products();
     <div id="box_wrapper">
         <header class="page_header_side page_header_side_sticked active-slide-side-header ds">
             <div class="side_header_logo ds ms">
-                <a href="../../views/pages/dashboard.php">
+                <a href="<?= URL . "views/admin-dashboard/views/pages/dashboard.php" ?>">
                     <span class="logo_text margin_0">
                         Fixit | Dashboard
                     </span>
@@ -77,7 +79,7 @@ $getProducts = products();
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../../logout.php">
+                                        <a href="<?= URL . "views/admin-dashboard/logout.php" ?>">
                                             <i class="fa fa-sign-out"></i>
                                             Log Out
                                         </a>
@@ -90,7 +92,7 @@ $getProducts = products();
                         <h3 class="dark_bg_color">Dashboard</h3>
                         <ul class="menu-click">
                             <li>
-                                <a href="../../views/pages/dashboard.php">
+                                <a href="<?= URL . "views/admin-dashboard/views/pages/dashboard.php" ?>">
                                     <i class="fa fa-th-large"></i>
                                     Dashboard
                                 </a>
@@ -105,12 +107,12 @@ $getProducts = products();
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="admin_posts.html">
+                                        <a href="<?= URL . "views/admin-dashboard/views/pages/services/services.php" ?>">
                                             All Services
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="admin_post.html">
+                                        <a href="<?= URL . "views/admin-dashboard/views/pages/services/addservices.php" ?>">
                                             Add Service
                                         </a>
                                     </li>
@@ -123,12 +125,12 @@ $getProducts = products();
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="products.php">
+                                        <a href="<?= URL . "views/admin-dashboard/views/pages/products/products.php" ?>">
                                             Products
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="addproduct.php">
+                                        <a href="<?= URL . "views/admin-dashboard/views/pages/products/addproduct.php" ?>">
                                             Add Product
                                         </a>
                                     </li>
@@ -172,7 +174,7 @@ $getProducts = products();
         </header>
         <header class="page_header header_darkgrey">
             <div class="widget widget_search">
-                <form method="get" class="searchform form-inline" action="https://html.modernwebtemplates.com/fixit/">
+                <form method="get" class="searchform form-inline" action="<?= URL . "views/admin-dashboard/core/search.php" ?>">
                     <div class="form-group">
                         <label class="screen-reader-text" for="widget-search-header">Search for:</label>
                         <input id="widget-search-header" type="text" name="search" class="form-control" placeholder="Search">
@@ -183,7 +185,7 @@ $getProducts = products();
             <div class="pull-right big-header-buttons">
                 <ul class="inline-dropdown inline-block">
                     <li class="nav-item">
-                        <a href="../../../../index.php" class="nav-link text-white">View Site</a>
+                        <a href="<?= URL . "index.php" ?>" class="nav-link text-white">View Site</a>
                     </li>
                     <li class="dropdown user-dropdown-menu">
                         <a class="header-button" id="user-dropdown-menu" data-target="#" href="./" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
@@ -205,7 +207,7 @@ $getProducts = products();
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="../../logout.php">
+                                    <a href="<?= URL . "views/admin-dashboard/logout.php" ?>">
                                         <i class="fa fa-sign-out"></i>
                                         Log Out
                                     </a>
@@ -228,7 +230,7 @@ $getProducts = products();
                     <div class="col-md-6">
                         <ol class="breadcrumb darklinks">
                             <li>
-                                <a href="#">Homepage</a>
+                                <a href="<?= URL . "index.php" ?>">Homepage</a>
                             </li>
                             <li class="active">Dashboard</li>
                         </ol>
@@ -241,7 +243,7 @@ $getProducts = products();
                 <div class="row">
                     <div class="col-md-4">
                         <h3 class="dashboard-page-title">Dashboard
-                            <small>All Products</small>
+                            <small>All Services</small>
                         </h3>
                     </div>
                 </div>
@@ -273,30 +275,30 @@ $getProducts = products();
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if (count($getProducts) > 0) : ?>
-                                    <?php foreach ($getProducts as $product) : ?>
+                                <?php if (count($getServices) > 0) : ?>
+                                    <?php foreach ($getServices as $services) : ?>
                                         <tr class="text-center">
                                             <td>
-                                                <?= $product['id'] ?>
+                                                <?= $services['id'] ?>
                                             </td>
                                             <td>
-                                                <?= $product['name'] ?>
+                                                <?= $services['name'] ?>
                                             </td>
                                             <td>
-                                                <?= $product['price'] ?>
+                                                <?= $services['price'] ?>
                                                 <span class="currency">EGP</span>
                                             </td>
                                             <td>
-                                                <img width="100" src="../../../../assets/imgs/images/products/<?= $product['img'] ?>" alt="pic">
+                                                <img width="100" src="../../../../assets/imgs/images/products/<?= $services['img'] ?>" alt="pic">
                                             </td>
                                             <td>
-                                                <a href="editproduct.php?pro_id=<?= $product['id'] ?>" class="btn btn-warning text-white">Edit</a>
-                                                <a href="../../core/products/deleteproduct.php?pro_id=<?= $product['id'] ?>" class="btn btn-danger text-white">Delete</a>
+                                                <a href="editproduct.php?service_id=<?= $product['id'] ?>" class="btn btn-warning text-white">Edit</a>
+                                                <a href="../../core/products/deleteproduct.php?service_id=<?= $services['id'] ?>" class="btn btn-danger text-white">Delete</a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
                                 <?php else : ?>
-                                    <h1 class="text-center">No Product Found</h1>
+                                    <h1 class="text-center">No Service Found</h1>
                                 <?php endif; ?>
                             </tbody>
                         </table>
@@ -306,7 +308,7 @@ $getProducts = products();
         </section>
         <?php
         //! Include Footer
-        include "../inc/footer.php";
+        include INCLUDEURL . "views/admin-dashboard/views/inc/footer.php";
         ?>
     </div>
 </div>

@@ -1,17 +1,19 @@
 <?php
 //! include Session
-session_start();
+if (session_status() == PHP_SESSION_NONE) session_start();
+//! Include Functions
+include "../../../core/functions.php";
 //! Include Connection
-include "../../config/database.php";
+include INCLUDEURL . "views/admin-dashboard/config/database.php";
+//! Include Header
+include INCLUDEURL . "views/admin-dashboard/views/inc/header.php";
 //! Include Auth
 if (!isset($_SESSION['login'])) {
-    header("location: ../../../pages/error.php");
+    redirect(ERROR . "pages/error.php ");
 }
-//! Incude Header
-include "../inc/header.php";
 //! Include Product Functions
-include "../../core/products/products.php";
-$id = $_GET['pro_id'];
+include INCLUDEURL . "views/admin-dashboard/core/services/editservices.php";
+$id = $_GET['service_id'];
 $service = getServiceById($id);
 ?>
 <div class="preloader">
@@ -25,7 +27,7 @@ $service = getServiceById($id);
         </span>
     </button>
     <div class="widget widget_search">
-        <form method="get" class="searchform search-form form-inline" action="https://html.modernwebtemplates.com/fixit/">
+        <form method="get" class="searchform search-form form-inline" action="<?= URL . "views/admin-dashboard/core/search.php" ?> ">
             <div class="form-group">
                 <input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
             </div>
@@ -37,7 +39,7 @@ $service = getServiceById($id);
     <div id="box_wrapper">
         <header class="page_header_side page_header_side_sticked active-slide-side-header ds">
             <div class="side_header_logo ds ms">
-                <a href="../../views/pages/dashboard.php">
+                <a href="<?= URL . "views/admin-dashboard/views/pages/dashboard.php" ?>">
                     <span class="logo_text margin_0">
                         Fixit | Dashboard
                     </span>
@@ -78,7 +80,7 @@ $service = getServiceById($id);
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../../logout.php">
+                                        <a href="<?= URL . "views/admin-dashboard/logout.php" ?>">
                                             <i class="fa fa-sign-out"></i>
                                             Log Out
                                         </a>
@@ -91,7 +93,7 @@ $service = getServiceById($id);
                         <h3 class="dark_bg_color">Dashboard</h3>
                         <ul class="menu-click">
                             <li>
-                                <a href="../../views/pages/dashboard.php">
+                                <a href="<?= URL . "views/admin-dashboard/views/pages/dashboard.php" ?>">
                                     <i class="fa fa-th-large"></i>
                                     Dashboard
                                 </a>
@@ -106,12 +108,12 @@ $service = getServiceById($id);
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="admin_posts.html">
+                                        <a href="<?= URL . "views/admin-dashboard/views/pages/services/services.php" ?>">
                                             All Services
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="admin_post.html">
+                                        <a href="<?= URL . "views/admin-dashboard/views/pages/services/addservices.php" ?>">
                                             Add Service
                                         </a>
                                     </li>
@@ -124,12 +126,12 @@ $service = getServiceById($id);
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="products.php">
+                                        <a href="<?= URL . "views/admin-dashboard/views/pages/products/products.php" ?>">
                                             Products
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="addproduct.php">
+                                        <a href="<?= URL . "views/admin-dashboard/views/pages/products/addproduct.php" ?>">
                                             Add Product
                                         </a>
                                     </li>
@@ -173,7 +175,7 @@ $service = getServiceById($id);
         </header>
         <header class="page_header header_darkgrey">
             <div class="widget widget_search">
-                <form method="get" class="searchform form-inline" action="https://html.modernwebtemplates.com/fixit/">
+                <form method="get" class="searchform form-inline" action="<?= URL . "views/admin-dashbaord/core/search.php" ?>">
                     <div class="form-group">
                         <label class="screen-reader-text" for="widget-search-header">Search for:</label>
                         <input id="widget-search-header" type="text" name="search" class="form-control" placeholder="Search">
@@ -184,7 +186,7 @@ $service = getServiceById($id);
             <div class="pull-right big-header-buttons">
                 <ul class="inline-dropdown inline-block">
                     <li class="nav-item">
-                        <a href="../../../../index.php" class="nav-link text-white">View Site</a>
+                        <a href="<?= URL . "index.php" ?>" class="nav-link text-white">View Site</a>
                     </li>
                     <li class="dropdown user-dropdown-menu">
                         <a class="header-button" id="user-dropdown-menu" data-target="#" href="./" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
@@ -206,7 +208,7 @@ $service = getServiceById($id);
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="../../logout.php">
+                                    <a href="<?= URL . "views/admin-dashboard/logout.php" ?>">
                                         <i class="fa fa-sign-out"></i>
                                         Log Out
                                     </a>
@@ -229,7 +231,7 @@ $service = getServiceById($id);
                     <div class="col-md-6">
                         <ol class="breadcrumb darklinks">
                             <li>
-                                <a href="#">Homepage</a>
+                                <a href="<?= URL . "index.php" ?>">Homepage</a>
                             </li>
                             <li class="active">Dashboard</li>
                         </ol>
@@ -242,7 +244,7 @@ $service = getServiceById($id);
                 <div class="row">
                     <div class="col-md-4">
                         <h3 class="dashboard-page-title">Dashboard
-                            <small>EDIT Product</small>
+                            <small>EDIT Services</small>
                         </h3>
                     </div>
                 </div>
@@ -263,12 +265,12 @@ $service = getServiceById($id);
                                 <?php unset($_SESSION['success']) ?>
                             </div>
                         <?php endif; ?>
-                        <form action="../../core/products/editproduct.php" method="post" class="form-group addproduct" enctype="multipart/form-data">
+                        <form action="<?= URL . "views/admin-dashboard/core/services/editservices.php" ?>" method="post" class="form-group addproduct" enctype="multipart/form-data">
                             <input type="hidden" name="id" value="<?= $id ?>" class="form-control" placeholder="id">
-                            <input type="text" name="name" value="<?= $product['name'] ?>" placeholder="Product Name" class="form-control">
-                            <input type="number" step="0.01" min="1" max="1000000" name="price" value="<?= $product['price'] ?>" placeholder="Product price" class="form-control">
-                            <img src="../../../../assets/imgs/images/products/<?= $product['img'] ?>" alt="<?= $product['img'] ?>" width="200" style="margin-bottom: 20px;">
-                            <input type="file" class="form-control" value="<?= $product['img'] ?>" name="img" placeholder="Product Img">
+                            <input type="text" name="name" value="<?= $service['name'] ?>" placeholder="Product Name" class="form-control">
+                            <input type="number" step="0.01" min="1" max="1000000" name="price" value="<?= $service['price'] ?>" placeholder="Product price" class="form-control">
+                            <img src="<?= URL . 'assets/imgs/images/services/' ?><?= $service['img'] ?>" alt="<?= $service['img'] ?>" width="200" style="margin-bottom: 20px;">
+                            <input type="file" class="form-control" value="<?= $service['img'] ?>" name="img" placeholder="Product Img">
                             <button name="submit" type="submit">submit</button>
                         </form>
                     </div>
@@ -277,7 +279,7 @@ $service = getServiceById($id);
         </section>
         <?php
         //! Include Footer
-        include "../inc/footer.php";
+        include INCLUDEURL . "views/admin-dashboard/views/inc/footer.php";
         ?>
     </div>
 </div>
