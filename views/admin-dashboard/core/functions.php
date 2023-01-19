@@ -1,5 +1,7 @@
 <?php
+//! Start Session
 if (session_status() == PHP_SESSION_NONE) session_start();
+//! Path
 $rootDirName = basename(dirname(dirname(dirname(__DIR__))));
 $explodes = explode("/", $_SERVER['REQUEST_URI']);
 $Path = "";

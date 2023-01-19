@@ -32,7 +32,7 @@ if (!isset($_SESSION['login'])) {
     <div id="box_wrapper">
         <header class="page_header_side page_header_side_sticked active-slide-side-header ds">
             <div class="side_header_logo ds ms">
-                <a href="../../views/pages/dashboard.php">
+                <a href="<?= URL . "views/admin-dashboard/views/pages/dashboard.php" ?>">
                     <span class="logo_text margin_0">
                         Fixit | Dashboard
                     </span>

@@ -17,6 +17,9 @@ if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     $avatar = $_FILES['img']['name'];
     $timestamp = time();
     $explode = explode(".", $avatar);
+    $baseName = basename($avatar);
+    print_r($baseName);
+    die;
     $Ext = $explode[1];
     $img = $timestamp . "." . $Ext;
     $tmp_name = $_FILES['img']['tmp_name'];
