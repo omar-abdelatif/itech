@@ -73,4 +73,10 @@ function deleteWithImage($id)
         mysqli_affected_rows($connection);
     }
 }
-?>
+function getAllImage()
+{
+    $connection = connection();
+    $selectsql = "SELECT `img` FROM `services`";
+    $query = mysqli_query($connection, $selectsql);
+    return mysqli_fetch_all($query, MYSQLI_ASSOC);
+}

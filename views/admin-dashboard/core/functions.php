@@ -1,7 +1,7 @@
 <?php
-//! Start Session
+// Start Session
 if (session_status() == PHP_SESSION_NONE) session_start();
-//! Path
+// Path
 $rootDirName = basename(dirname(dirname(dirname(__DIR__))));
 $explodes = explode("/", $_SERVER['REQUEST_URI']);
 $Path = "";
@@ -12,14 +12,20 @@ foreach ($explodes as $item) {
     }
     $Path .= "$item/";
 }
-//! Anchor Url
+// Anchor Url
 define("URL", "http://" . $_SERVER['SERVER_NAME'] . $Path);
-//! Include Url
+// Include Url
 define("INCLUDEURL", $_SERVER['DOCUMENT_ROOT'] . $Path);
-//! Error Url
+// Error Url
 define("ERROR", "http://" . $_SERVER['SERVER_NAME'] . $Path);
 
 //! Functions
+function dd($data)
+{
+    echo "<pre>";
+    print_r($data);
+    die;
+}
 function redirect($path)
 {
     header("location: $path");
@@ -35,10 +41,4 @@ function emailExistence($email)
             return true;
         }
     }
-}
-function dd($data)
-{
-    echo "<pre>";
-    print_r($data);
-    die;
 }
