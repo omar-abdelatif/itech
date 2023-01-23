@@ -9,10 +9,10 @@ include INCLUDEURL . "views/admin-dashboard/config/database.php";
 include INCLUDEURL . "views/admin-dashboard/views/inc/header.php";
 //! Include Auth
 if (!isset($_SESSION['login'])) {
-    redirect(ERROR . "pages/error.php ");
+    redirect(ERROR . "views/pages/error.php");
 }
-//! Include Product Functions
-include INCLUDEURL . "views/admin-dashboard/core/services/editservices.php";
+//! Include Services Functions
+include INCLUDEURL . "views/admin-dashboard/core/services/allservices.php";
 $id = $_GET['service_id'];
 $service = getServiceById($id);
 ?>
@@ -268,8 +268,8 @@ $service = getServiceById($id);
                         <form action="<?= URL . "views/admin-dashboard/core/services/editservices.php" ?>" method="post" class="form-group addproduct" enctype="multipart/form-data">
                             <input type="hidden" name="id" value="<?= $id ?>" class="form-control" placeholder="id">
                             <input type="text" name="name" value="<?= $service['name'] ?>" placeholder="Product Name" class="form-control">
-                            <input type="number" step="0.01" min="1" max="1000000" name="price" value="<?= $service['price'] ?>" placeholder="Product price" class="form-control">
-                            <img src="<?= URL . 'assets/imgs/images/services/' ?><?= $service['img'] ?>" alt="<?= $service['img'] ?>" width="200" style="margin-bottom: 20px;">
+                            <input type="number" step="0.01" min="1" max="1000000" name="price" value="<?= $service['description'] ?>" placeholder="Product price" class="form-control">
+                            <img src="<?= URL . 'assets/imgs/images/services/' ?><?= $service['img'] ?>" alt="<?= $service['name'] ?>" width="200" style="margin-bottom: 20px;">
                             <input type="file" class="form-control" value="<?= $service['img'] ?>" name="img" placeholder="Product Img">
                             <button name="submit" class="mt-3" type="submit">submit</button>
                         </form>

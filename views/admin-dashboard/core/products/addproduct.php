@@ -1,12 +1,16 @@
 <?php
 //! include Session
-session_start();
-//! Include Connection
-include "../../config/database.php";
+if (session_status() == PHP_SESSION_NONE) session_start();
 //! Include Functions
 include "../functions.php";
+//! Include Connection
+include INCLUDEURL . "views/admin-dashboard/config/database.php";
 //! Include Products Functions
-include "products.php";
+include INCLUDEURL . "views/admin-dashboard/core/products/products.php";
+//! Auth
+if (!isset($_SESSION['login'])) {
+    redirect(ERROR . "views/pages/error.php");
+}
 //! Functions
 if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     $errors = [];
@@ -34,6 +38,6 @@ if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
         header("location: ../../views/pages/addproduct.php");
     } else {
         $_SESSION['errors'] = $errors;
-        header("location: ../../views/pages/addproduct.php");
+        redirect(ERROR . "views/pages/addproduct.php");
     }
 }

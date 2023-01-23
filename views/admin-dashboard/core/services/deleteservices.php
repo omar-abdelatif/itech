@@ -1,18 +1,20 @@
 <?php
 //! Start Session
-session_start();
+if (session_status() == PHP_SESSION_NONE) session_start();
+//! Include Functions
+include "../functions.php";
 //! Include Connection
-include "../../config/database.php";
+include INCLUDEURL . "views/admin-dashboard/config/database.php";
 //! Include Product Functions
-include "../products/products.php";
+include INCLUDEURL . "views/admin-dashboard/core/services/allservices.php";
 //! Include Auth
 if (!isset($_SESSION['login'])) {
-    header("location: ../../../pages/error.php");
+    redirect(ERROR . "views/pages/error.php");
 }
 //! Functions
-if (isset($_GET['pro_id'])) {
-    $id = $_GET['pro_id'];
+if (isset($_GET['service_id'])) {
+    $id = $_GET['service_id'];
     deleteWithImage($id);
     $_SESSION['success'] = "Product Deleted Successfully";
-    header("location: ../../views/pages/products.php");
+    redirect(URL . "/views/admin-dashboard/views/pages/services/services.php");
 }

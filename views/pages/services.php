@@ -121,17 +121,13 @@ $getServices = services();
                 <?php foreach ($getServices as $service) : ?>
                     <div class="col-lg-4">
                         <div class="card justify-content-center">
-                            <div class="card-img mx-auto" style="background-image: url(../../assets/imgs/images/services/<?= $services['img'] ?>);"></div>
+                            <div class="card-img mx-auto" style="background-image: url(../../assets/imgs/images/services/<?= $service['img'] ?>);"></div>
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    <?= $services['name'] ?>
+                                    <?= $service['name'] ?>
                                 </h5>
-                                <p class="card-desc me-auto">
-                                    <?= $services['description'] ?>
-                                </p>
-                                <p class="service-price mt-3 ">
-                                    <?= $services['price'] ?>
-                                    <span class="currency">EGP</span>
+                                <p class="card-desc">
+                                    <?= $service['description'] ?>
                                 </p>
                             </div>
                         </div>
@@ -139,7 +135,6 @@ $getServices = services();
                 <?php endforeach ?>
             </div>
         </div>
-
     </section>
     <div class="scroll">
         <a class="btn">

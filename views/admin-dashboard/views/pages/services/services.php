@@ -270,7 +270,7 @@ $i = 1;
                                 <tr>
                                     <th class="text-center">#</th>
                                     <th class="text-center">Service Name</th>
-                                    <th class="text-center">Service Price</th>
+                                    <th class="text-center">Service Description</th>
                                     <th class="text-center">IMG</th>
                                     <th class="text-center">Action</th>
                                 </tr>
@@ -286,15 +286,14 @@ $i = 1;
                                                 <?= $services['name'] ?>
                                             </td>
                                             <td>
-                                                <?= $services['price'] ?>
-                                                <span class="currency">EGP</span>
+                                                <?= $services['description'] ?>
                                             </td>
                                             <td>
                                                 <img width="100" src="<?= URL . 'assets/imgs/images/services/' ?><?= $services["img"] ?> " alt="<?= $services['name'] ?>">
                                             </td>
                                             <td>
-                                                <a href="<?= URL ?>views/admin-dashboard/views/pages/services/editservice.php?service_id=<?= $services['id'] ?>" class="btn btn-warning text-white">Edit</a>
-                                                <a href="<?= URL ?>views/admin-dashboard/views/pages/services/deleteproduct.php?service_id=<?= $services['id'] ?>" class="btn btn-danger text-white">Delete</a>
+                                                <a href="<?= URL ?>views/admin-dashboard/views/pages/services/editservices.php?service_id=<?= $services['id'] ?>" class="btn btn-warning text-white">Edit</a>
+                                                <a href="<?= URL ?>views/admin-dashboard/core/services/deleteservices.php?service_id=<?= $services['id'] ?>" class="btn btn-danger text-white">Delete</a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
