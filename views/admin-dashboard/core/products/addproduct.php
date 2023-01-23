@@ -35,7 +35,7 @@ if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
         uploadImage($tmp_name, $location);
         insertProduct($product_name, $product_price, $newAvatar);
         $_SESSION['success'] = "Product Registed Successfully";
-        header("location: ../../views/pages/addproduct.php");
+        redirect(URL . "views/admin-dashboard/views/pages/products/addproduct.php");
     } else {
         $_SESSION['errors'] = $errors;
         redirect(ERROR . "views/pages/addproduct.php");

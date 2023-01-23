@@ -1,6 +1,6 @@
 <?php
 //! Open Session
-if (session_status() == PHP_SESSION_NONE) session_start();
+// if (session_status() == PHP_SESSION_NONE) session_start();
 //! Include Functions
 include "../functions.php";
 //! Include Connection
@@ -26,6 +26,6 @@ if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     $location = $path . $img;
     uploadImage($tmp_name, $location);
     updateService($id, $service_name, $service_desc, $img);
-    redirect(URL . "/views/admin-dashboard/views/pages/services/editservices.php");
+    redirect(URL . "views/admin-dashboard/views/pages/services/editservices.php");
     die;
 }

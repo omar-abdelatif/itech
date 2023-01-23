@@ -464,7 +464,7 @@ input[type='text'] {
 	transform: skewY(390deg);
 }
 .card::after {
-	content: 'CORSAIR';
+	content: '';
 	position: absolute;
 	bottom: 0;
 	left: 0;

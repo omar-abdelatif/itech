@@ -13,6 +13,7 @@ if (!isset($_SESSION['login'])) {
 }
 //! Include Services Functions
 include INCLUDEURL . "views/admin-dashboard/core/services/allservices.php";
+//! Semi Functions
 $id = $_GET['service_id'];
 $service = getServiceById($id);
 ?>
@@ -265,12 +266,12 @@ $service = getServiceById($id);
                                 <?php unset($_SESSION['success']) ?>
                             </div>
                         <?php endif; ?>
-                        <form action="<?= URL . "views/admin-dashboard/core/services/editservices.php" ?>" method="post" class="form-group addproduct" enctype="multipart/form-data">
+                        <form action="<?= URL . 'views/admin-dashboard/core/services/editservices.php' ?>" method="post" class="form-group addproduct" enctype="multipart/form-data">
                             <input type="hidden" name="id" value="<?= $id ?>" class="form-control" placeholder="id">
-                            <input type="text" name="name" value="<?= $service['name'] ?>" placeholder="Product Name" class="form-control">
-                            <input type="number" step="0.01" min="1" max="1000000" name="price" value="<?= $service['description'] ?>" placeholder="Product price" class="form-control">
+                            <input type="text" name="name" value="<?= $service['name'] ?>" placeholder="Services Name" class="form-control">
+                            <input type="text" name="description" value="<?= $service['description'] ?>" placeholder="Services Description" class="form-control">
                             <img src="<?= URL . 'assets/imgs/images/services/' ?><?= $service['img'] ?>" alt="<?= $service['name'] ?>" width="200" style="margin-bottom: 20px;">
-                            <input type="file" class="form-control" value="<?= $service['img'] ?>" name="img" placeholder="Product Img">
+                            <input type="file" class="form-control" value="<?= $service['img'] ?>" name="img">
                             <button name="submit" class="mt-3" type="submit">submit</button>
                         </form>
                     </div>
