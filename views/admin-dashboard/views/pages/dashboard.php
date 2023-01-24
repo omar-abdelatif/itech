@@ -7,7 +7,7 @@ include "../../core/functions.php";
 include INCLUDEURL . "views/admin-dashboard/views/inc/header.php";
 //! Include Auth Admin
 if (!isset($_SESSION['login'])) {
-    redirect("location:" . ERROR . "views/pages/error.php");
+    redirect(ERROR . "views/pages/error.php");
 }
 ?>
 <div class="preloader">

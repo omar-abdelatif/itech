@@ -5,12 +5,16 @@ if (session_status() == PHP_SESSION_NONE) session_start();
 include "../../../core/functions.php";
 //! Include Header
 include INCLUDEURL . "views/admin-dashboard/views/inc/header.php";
+//! Include Connection
+include INCLUDEURL . "views/admin-dashboard/config/database.php";
 //! Include Auth
 if (!isset($_SESSION['login'])) {
-    redirect(ERROR . "pages/error.php");
+    redirect(ERROR . "views/pages/error.php");
 }
 //! Include Services Functions
 include INCLUDEURL . "views/admin-dashboard/core/user.php";
+//! Semi Functions
+$getUsers = users();
 ?>
 <div class="preloader">
     <div class="preloader_image"></div>
@@ -234,5 +238,51 @@ include INCLUDEURL . "views/admin-dashboard/core/user.php";
                 </div>
             </div>
         </section>
+        <section class="ls section_padding_top_50 section_padding_bottom_50 columns_padding_10">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 class="dashboard-page-title">Dashboard
+                            <small>Profile</small>
+                        </h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                                <div class="with_border with_padding">
+                                    <div class="media big-left-media">
+                                        <?php foreach ($getUsers as $user) : ?>
+                                            <div class="media-left">
+                                                <img src="<?= URL . 'assets/imgs/images/users/' ?><?= $user['img'] ?>" alt="<?= $user['img'] ?>">
+                                            </div>
+                                            <div class="media-body">
+                                                <h4>
+                                                    <?= $user['name'] ?>
+                                                    <small>Admin</small>
+                                                </h4>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                                                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                                    aliquip ex ea commodo.
+                                                </p>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row"></div>
+                        <div class="row"></div>
+                    </div>
+                    <div class="col-xs-12 col-md-3"></div>
+                </div>
+        </section>
+        <?php
+        //! Include Footer
+        include INCLUDEURL . "views/admin-dashboard/views/inc/footer.php";
+        ?>
     </div>
 </div>
