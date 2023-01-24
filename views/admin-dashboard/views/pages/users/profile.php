@@ -331,6 +331,45 @@ $getUsers = users();
                                     </ul>
                                 </div>
                             </div>
+                            <div class="col-xs-12 col-md-6">
+                                <div class="with_border with_padding">
+                                    <h4>
+                                        User Statistics
+                                    </h4>
+                                    <ul class="list1 no-bullets">
+                                        <li>
+                                            <div class="media small-teaser">
+                                                <div class="media-left media-middle">
+                                                    <div class="teaser_icon label-success fontsize_16">
+                                                        <i class="fa fa-comments"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="media-body media-middle">
+                                                    <strong class="grey">
+                                                        Services:
+                                                    </strong>
+                                                    146
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media small-teaser">
+                                                <div class="media-left media-middle">
+                                                    <div class="teaser_icon label-success fontsize_16">
+                                                        <i class="fa fa-comments"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="media-body media-middle">
+                                                    <strong class="grey">
+                                                        Products:
+                                                    </strong>
+                                                    146
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-3">
@@ -352,7 +391,80 @@ $getUsers = users();
                                                     <p>
                                                         <strong>
                                                             <?= $user['work_num'] ?>
-                                                        </strong> (07:00-17:00 EST Mon-Fri)
+                                                        </strong>
+                                                        (07:00-17:00 EST Mon-Fri)
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="icon-tab collapsed" data-toggle="collapse" data-parent="#contact-info-accordion" href="#user-info-collapse2">
+                                                        <i class="highlight fontsize_16 fa fa-mobile"></i>
+                                                        Mobile Phone
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="user-info-collapse2" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <p>
+                                                        <strong>
+                                                            <?= $user['phone_num'] ?>
+                                                        </strong>
+                                                        (07:00-17:00 EST Mon-Fri)
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="icon-tab collapsed" data-toggle="collapse" data-parent="#contact-info-accordion" href="#user-info-collapse3">
+                                                        <i class="highlight fontsize_16 fa fa-envelope"></i>
+                                                        E-mail address
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="user-info-collapse3" class="panel-collapse collapse">
+                                                <div class="panel-body text-center">
+                                                    <p class="greylinks">
+                                                        <a href="mailto:omaraboregela100@gmail.com?subject=Email from my website&body=Hello, How are you?">Send an email</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="icon-tab collapsed" data-toggle="collapse" data-parent="#contact-info-accordion" href="#user-info-collapse4">
+                                                        <i class="highlight fontsize_16 fa fa-map-marker"></i>
+                                                        Address
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="user-info-collapse4" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <p>
+                                                        <?= $user['work_add'] ?>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="icon-tab collapsed" data-toggle="collapse" data-parent="#contact-info-accordion" href="#user-info-collapse5">
+                                                        <i class="highlight fontsize_16 fa fa-users"></i>
+                                                        Social Networks
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="user-info-collapse5" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <p>
+                                                        <a href="https://www.facebook.com/<?= $user['facebook'] ?>" class="social-icon soc-facebook"></a>
+                                                        <a href="https://wa.me/<?= $user['whatsapp'] ?>" class="social-icon soc-whatsapp"></a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -363,6 +475,7 @@ $getUsers = users();
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
         <?php
         //! Include Footer
