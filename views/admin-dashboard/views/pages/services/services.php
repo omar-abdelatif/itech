@@ -11,7 +11,7 @@ include INCLUDEURL . "views/admin-dashboard/views/inc/header.php";
 if (!isset($_SESSION['login'])) {
     redirect(ERROR . "pages/error.php");
 }
-//! Include Products Functions
+//! Include Services Functions
 include INCLUDEURL . "views/admin-dashboard/core/services/allservices.php";
 $getServices = services();
 $i = 1;
@@ -292,8 +292,8 @@ $i = 1;
                                                 <img width="100" src="<?= URL . 'assets/imgs/images/services/' ?><?= $services["img"] ?> " alt="<?= $services['name'] ?>">
                                             </td>
                                             <td>
-                                                <a href="<?= URL ?>views/admin-dashboard/views/pages/services/editservices.php?service_id=<?= $services['id'] ?>" class="btn btn-warning text-white">Edit</a>
-                                                <a href="<?= URL ?>views/admin-dashboard/core/services/deleteservices.php?service_id=<?= $services['id'] ?>" class="btn btn-danger text-white">Delete</a>
+                                                <a href="<?= URL ?>views/admin-dashboard/views/pages/services/editservices.php?ser_id=<?= $services['id'] ?>" class="btn btn-warning text-white">Edit</a>
+                                                <a href="<?= URL ?>views/admin-dashboard/core/services/deleteservices.php?ser_id=<?= $services['id'] ?>" class="btn btn-danger text-white">Delete</a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

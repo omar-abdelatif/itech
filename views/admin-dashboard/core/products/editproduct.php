@@ -18,15 +18,10 @@ if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     $product_price = $_POST['price'];
     $avatar = $_FILES['img']['name'];
     $type = $_FILES['img']['type'];
-    $timestamp = time();
-    // $explode = explode(".", $avatar);
-    $Ext = basename($type);
-    $img = $timestamp . "." . $Ext;
     $tmp_name = $_FILES['img']['tmp_name'];
     $path = '../../../../assets/imgs/images/products/';
     $location = $path . $img;
     uploadImage($tmp_name, $location);
-    updateProduct($id, $product_name, $product_price, $img);
+    updateProduct($id, $product_name, $product_price, $avatar);
     redirect(URL . "views/admin-dashboard/views/pages/products/products.php");
-    die;
 }

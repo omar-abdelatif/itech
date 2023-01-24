@@ -7,14 +7,15 @@ include "../../../core/functions.php";
 include INCLUDEURL . "views/admin-dashboard/config/database.php";
 //! Include Header
 include INCLUDEURL . "views/admin-dashboard/views/inc/header.php";
-//! Include Auth
+//! Include Auth Admin
 if (!isset($_SESSION['login'])) {
     redirect(ERROR . "views/pages/error.php");
 }
 //! Include Services Functions
 include INCLUDEURL . "views/admin-dashboard/core/services/allservices.php";
 //! Semi Functions
-$id = $_GET['service_id'];
+$id = $_GET['ser_id'];
+
 $service = getServiceById($id);
 ?>
 <div class="preloader">
@@ -272,7 +273,7 @@ $service = getServiceById($id);
                             <input type="text" name="description" value="<?= $service['description'] ?>" placeholder="Services Description" class="form-control">
                             <img src="<?= URL . 'assets/imgs/images/services/' ?><?= $service['img'] ?>" alt="<?= $service['name'] ?>" width="200" style="margin-bottom: 20px;">
                             <input type="file" class="form-control" value="<?= $service['img'] ?>" name="img">
-                            <button name="submit" class="mt-3" type="submit">submit</button>
+                            <button name="submit" class="mt-3" type="submit">Submit</button>
                         </form>
                     </div>
                 </div>

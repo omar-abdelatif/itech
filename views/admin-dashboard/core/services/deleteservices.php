@@ -12,9 +12,9 @@ if (!isset($_SESSION['login'])) {
     redirect(ERROR . "views/pages/error.php");
 }
 //! Functions
-if (isset($_GET['service_id'])) {
-    $id = $_GET['service_id'];
+if (isset($_GET['ser_id'])) {
+    $id = $_GET['ser_id'];
     deleteWithImage($id);
     $_SESSION['success'] = "Product Deleted Successfully";
-    redirect(URL . "/views/admin-dashboard/views/pages/services/services.php");
+    redirect(URL . "views/admin-dashboard/views/pages/services/services.php");
 }

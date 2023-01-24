@@ -33,7 +33,7 @@ function updateService($id, $service_name, $service_desc, $img)
     } else {
         $extra = "";
     }
-    $query = "UPDATE `services` SET `name` = '$service_name', `description` = '$service_desc' $extra WHERE `id` = $id";
+    $query = " UPDATE `services` SET `name` = '$service_name', `description` = '$service_desc' $extra WHERE `id` = $id ";
     mysqli_query($connection, $query);
     return mysqli_affected_rows($connection);
 }
@@ -58,23 +58,23 @@ function uploadImage($tmp_name, $location)
         return $location;
     }
 }
-function updateImage($id){
-    $connection = connection();
-    $selectsql = "SELECT * FROM `services` WHERE `id` = $id";
-    $rsSelect = mysqli_query($connection, $selectsql);
-    $getRow = mysqli_fetch_assoc($rsSelect);
-    $path = URL . 'assets/imgs/images/services/';
-    $getImageName = $getRow['img'];
-    $createDeletePath = $path . $getImageName;
+// function updateImage($id){
+//     $connection = connection();
+//     $selectsql = "SELECT * FROM `services` WHERE `id` = $id";
+//     $rsSelect = mysqli_query($connection, $selectsql);
+//     $getRow = mysqli_fetch_assoc($rsSelect);
+//     $path = URL . 'assets/imgs/images/services/';
+//     $getImageName = $getRow['img'];
+//     $createDeletePath = $path . $getImageName;
 
-}
+// }
 function deleteWithImage($id)
 {
     $connection = connection();
     $selectsql = "SELECT * FROM `services` WHERE `id` = $id";
     $rsSelect = mysqli_query($connection, $selectsql);
     $getRow = mysqli_fetch_assoc($rsSelect);
-    $path = URL . 'assets/imgs/images/services/';
+    $path = '../../../../assets/imgs/images/services/';
     $getImageName = $getRow['img'];
     $createDeletePath = $path . $getImageName;
     if (unlink($createDeletePath)) {

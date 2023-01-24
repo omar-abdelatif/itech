@@ -1,7 +1,7 @@
 <?php
 //! include Session
 if (session_status() == PHP_SESSION_NONE) session_start();
-//! Incude Functions
+//! Include Functions
 include "../../../core/functions.php";
 //! Include Connection
 include INCLUDEURL . "views/admin-dashboard/config/database.php";
@@ -9,10 +9,11 @@ include INCLUDEURL . "views/admin-dashboard/config/database.php";
 include INCLUDEURL . "views/admin-dashboard/views/inc/header.php";
 //! Include Auth Admin
 if (!isset($_SESSION['login'])) {
-    redirect("location:" . ERROR . "pages/error.php");
+    redirect(ERROR . "views/pages/error.php");
 }
 //! Include Products Functions
 include INCLUDEURL . "views/admin-dashboard/core/products/products.php";
+//! Semi Functions
 $id = $_GET['pro_id'];
 $product = getProductById($id);
 ?>
