@@ -274,10 +274,94 @@ $getUsers = users();
                                 </div>
                             </div>
                         </div>
-                        <div class="row"></div>
-                        <div class="row"></div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <div class="with_border with_padding">
+                                    <h4>
+                                        User Info
+                                    </h4>
+                                    <ul class="list1 no-bullets">
+                                        <?php foreach ($getUsers as $user) : ?>
+                                            <li>
+                                                <div class="media small-teaser">
+                                                    <div class="media-left media-middle">
+                                                        <div class="teaser_icon label-warning round fontsize_16">
+                                                            <i class="fa fa-globe"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media-body media-middle">
+                                                        <strong class="grey">
+                                                            Location:
+                                                        </strong>
+                                                        <?= $user['country'] ?>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="media small-teaser">
+                                                    <div class="media-left media-middle">
+                                                        <div class="teaser_icon label-success round fontsize_16">
+                                                            <i class="fa fa-flag"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media-body media-middle">
+                                                        <strong class="grey">
+                                                            Company:
+                                                        </strong>
+                                                        <?= $user['comp_name'] ?>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="media small-teaser">
+                                                    <div class="media-left media-middle">
+                                                        <div class="teaser_icon label-info round fontsize_16">
+                                                            <i class="fa fa-briefcase"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media-body media-middle">
+                                                        <strong class="grey">
+                                                            Position:
+                                                        </strong>
+                                                        <?= $user['position'] ?>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        <?php endforeach ?>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-xs-12 col-md-3"></div>
+                    <div class="col-xs-12 col-md-3">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="panel-group bottommargin_0" id="contact-info-accordion">
+                                    <?php foreach ($getUsers as $user) : ?>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="icon-tab" data-toggle="collapse" data-parent="#contact-info-accordion" href="#user-info-collapse1">
+                                                        <i class="highlight fontsize_16 fa fa-phone"></i>
+                                                        Work Phone
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="user-info-collapse1" class="panel-collapse collapse in">
+                                                <div class="panel-body">
+                                                    <p>
+                                                        <strong>
+                                                            <?= $user['work_num'] ?>
+                                                        </strong> (07:00-17:00 EST Mon-Fri)
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
         </section>
         <?php
