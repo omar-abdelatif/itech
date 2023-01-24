@@ -63,13 +63,13 @@ include INCLUDEURL . "views/admin-dashboard/core/services/allservices.php";
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="admin_profile.html">
+                                        <a href="<?= URL . "views/admin-dashboard/views/pages/users/profile.php" ?>">
                                             <i class="fa fa-user"></i>
                                             Profile
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="admin_profile_edit.html">
+                                        <a href="<?= URL . "views/admin-dashboard/views/pages/users/editprofile.php" ?>">
                                             <i class="fa fa-edit"></i>
                                             Edit Profile
                                         </a>
@@ -191,13 +191,13 @@ include INCLUDEURL . "views/admin-dashboard/core/services/allservices.php";
                         <div class="dropdown-menu ls">
                             <ul class="nav darklinks">
                                 <li>
-                                    <a href="admin_profile.html">
+                                    <a href="<?= URL . "views/admin-dashboard/views/pages/users/profile.php" ?>">
                                         <i class="fa fa-user"></i>
                                         Profile
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="admin_profile_edit.html">
+                                    <a href="<?= URL . "views/admin-dashboard/views/pages/users/editprofile.php" ?>">
                                         <i class="fa fa-edit"></i>
                                         Edit Profile
                                     </a>

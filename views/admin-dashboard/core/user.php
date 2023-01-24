@@ -79,3 +79,6 @@ function getAllImage()
     $query = mysqli_query($connection, $selectsql);
     return mysqli_fetch_all($query, MYSQLI_ASSOC);
 }
+// function updateContact(){
+//  
+// }
