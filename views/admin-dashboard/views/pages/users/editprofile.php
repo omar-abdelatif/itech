@@ -371,11 +371,10 @@ $getUsers = users();
                     </div>
                 </div>
             </div>
+        </section>
     </div>
-    </section>
     <?php
     //! Include Footer
     include INCLUDEURL . "views/admin-dashboard/views/inc/footer.php";
     ?>
-</div>
 </div>
