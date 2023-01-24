@@ -249,13 +249,133 @@ $getUsers = users();
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
-                        <form method="post" action="<?= URL . "views/admin-dashboard/core/search.php" ?>" class="form-horizontal"></form>
+                        <form method="post" action="<?= URL . "views/admin-dashboard/core/users/editprofile.php" ?>" class="form-horizontal" enctype="multipart/form-data">
+                            <div class="row flex-row">
+                                <div class="col-md-6">
+                                    <div class="with_border with_padding">
+                                        <h4>User info</h4>
+                                        <hr>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label" for="user-profile-avatar">Select Avatar</label>
+                                            <div class="col-lg-9">
+                                                <input type="file" name="img" id="user-profile-avatar">
+                                                <p class="help-block">Select your 200x200px avatar</p>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label">Country:</label>
+                                            <div class="col-lg-9">
+                                                <select class="form-control" name="country">
+                                                    <option selected="">Select Country</option>
+                                                    <option value="egy">Egypt</option>
+                                                    <option value="usa">USA</option>
+                                                    <option value="uk">United Kingdom</option>
+                                                    <option value="aus">Australia</option>
+                                                    <option value="get">Germany</option>
+                                                    <option value="fr">France</option>
+                                                    <option value="other">Other</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label">Company name:</label>
+                                            <div class="col-lg-9">
+                                                <input type="text" name="comp_name" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label">Position:</label>
+                                            <div class="col-lg-9">
+                                                <input type="text" name="position" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="with_border with_padding">
+                                        <h4>Contact info</h4>
+                                        <hr>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label">Work number:</label>
+                                            <div class="col-lg-9">
+                                                <input type="tel" name="work_num" placeholder="Office Phone Number" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label">Mobile number:</label>
+                                            <div class="col-lg-9">
+                                                <input type="tel" name="phone_num" placeholder="Mobile Number" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label">E-mail address:</label>
+                                            <div class="col-lg-9">
+                                                <input type="email" name="email" placeholder="Email Address" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label">Work address:</label>
+                                            <div class="col-lg-9">
+                                                <textarea rows="2" name="work_add" placeholder="Address" class="form-control"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row flex-row">
+                                <div class="col-md-6">
+                                    <div class="with_border with_padding">
+                                        <h4>Security</h4>
+                                        <hr>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label">New password:</label>
+                                            <div class="col-lg-9">
+                                                <input type="password" name="password" placeholder="Password" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label">Repeat New password:</label>
+                                            <div class="col-lg-9">
+                                                <input type="password" placeholder="Confirm Password" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="with_border with_padding">
+                                        <h4>Social Networks</h4>
+                                        <hr>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label">FaceBook:</label>
+                                            <div class="col-lg-9">
+                                                <input type="text" placeholder="Facebook Username" name="facebook" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label">Whatsapp:</label>
+                                            <div class="col-lg-9">
+                                                <input type="text" placeholder="Whatsapp Mobile Number" name="whatsapp" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div>
+                                        <button type="submit" class="theme_button wide_button">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-        </section>
-        <?php
-        //! Include Footer
-        include INCLUDEURL . "views/admin-dashboard/views/inc/footer.php";
-        ?>
+            </div>
     </div>
+    </section>
+    <?php
+    //! Include Footer
+    include INCLUDEURL . "views/admin-dashboard/views/inc/footer.php";
+    ?>
+</div>
 </div>
