@@ -15,6 +15,7 @@ if (!isset($_SESSION['login'])) {
 include INCLUDEURL . "views/admin-dashboard/core/user.php";
 //! Semi Functions
 $getUsers = admin();
+$getSocial = selectSocail();
 ?>
 <div class="preloader">
     <div class="preloader_image"></div>
@@ -248,8 +249,8 @@ $getUsers = admin();
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-12">
-                        <form method="post" action="<?= URL . "views/admin-dashboard/core/users/editprofile.php" ?>" class="form-horizontal" enctype="multipart/form-data">
+                    <div class="col-lg-6">
+                        <form action="<?= URL . "views/admin-dashboard/core/users/userinfo.php" ?>" method="post" class="form-horizontal">
                             <div class="row flex-row">
                                 <div class="col-md-6">
                                     <div class="with_border with_padding">
@@ -296,8 +297,19 @@ $getUsers = admin();
                                                 <input type="text" name="position" value="<?= $getUsers['position'] ?>" placeholder="Position" class="form-control">
                                             </div>
                                         </div>
+                                        <div class="row form-group text-center">
+                                            <div class="col-lg-12">
+                                                <button type="submit" name="submit" class="theme_button wide_button w-100">Submit</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-6">
+                        <form action="<?= URL . "views/admin-dashboard/core/users/contact.php" ?>" method="post" class="form-horizontal">
+                            <div class="row flex-row">
                                 <div class="col-md-6">
                                     <div class="with_border with_padding">
                                         <h4>Contact info</h4>
@@ -329,6 +341,17 @@ $getUsers = admin();
                                     </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div>
+                                        <button type="submit" name="submit" class="theme_button wide_button">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-6">
+                        <form action="<?= URL . "views/admin-dashboard/core/users/security.php" ?>" method="post" class="form-horizontal">
                             <div class="row flex-row">
                                 <div class="col-md-6">
                                     <div class="with_border with_padding">
@@ -348,6 +371,19 @@ $getUsers = admin();
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div>
+                                        <button type="submit" name="submit" class="theme_button wide_button">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-6">
+                        <form action="<?= URL . "views/admin-dashboard/core/users/social.php" ?>" method="post" class="form-horizontal">
+                            <div class="row flex-row">
                                 <div class="col-md-6">
                                     <div class="with_border with_padding">
                                         <h4>Social Networks</h4>
@@ -355,13 +391,13 @@ $getUsers = admin();
                                         <div class="row form-group">
                                             <label class="col-lg-3 control-label">FaceBook:</label>
                                             <div class="col-lg-9">
-                                                <input type="text" placeholder="Facebook Username" value="<?= $getUsers['facebook'] ?>" name="facebook" class="form-control">
+                                                <input type="text" placeholder="Facebook Username" value="<?= $getSocial['facebook'] ?>" name="facebook" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row form-group">
                                             <label class="col-lg-3 control-label">Whatsapp:</label>
                                             <div class="col-lg-9">
-                                                <input type="text" placeholder="Whatsapp Mobile Number" value="<?= $getUsers['whatsapp'] ?>" name="whatsapp" class="form-control">
+                                                <input type="text" placeholder="Whatsapp Mobile Number" value="<?= $getSocial['whatsapp'] ?>" name="whatsapp" class="form-control">
                                             </div>
                                         </div>
                                     </div>

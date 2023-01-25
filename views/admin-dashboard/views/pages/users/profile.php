@@ -15,6 +15,7 @@ if (!isset($_SESSION['login'])) {
 include INCLUDEURL . "views/admin-dashboard/core/user.php";
 //! Semi Functions
 $getUsers = admin();
+$getSocial = selectSocail();
 ?>
 <div class="preloader">
     <div class="preloader_image"></div>
@@ -458,8 +459,8 @@ $getUsers = admin();
                                         <div id="user-info-collapse5" class="panel-collapse collapse">
                                             <div class="panel-body">
                                                 <p>
-                                                    <a href="https://www.facebook.com/<?= $getUsers['facebook'] ?>" class="social-icon soc-facebook"></a>
-                                                    <a href="https://wa.me/<?= $getUsers['whatsapp'] ?>" class="social-icon soc-whatsapp"></a>
+                                                    <a href="https://www.facebook.com/<?= $getSocial['facebook'] ?>" target="_blank" class="social-icon soc-facebook"></a>
+                                                    <a href="https://wa.me/+2<?= $getSocial['whatsapp'] ?>" target="_blank" class="social-icon soc-whatsapp"></a>
                                                 </p>
                                             </div>
                                         </div>

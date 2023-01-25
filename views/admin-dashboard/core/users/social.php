@@ -14,4 +14,6 @@ if (!isset($_SESSION['login'])) {
 if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     $facebook = $_POST['facebook'];
     $whatsapp = $_POST['whatsapp'];
+    insertSocial($facebook, $whatsapp);
+    redirect(URL . "views/admin-dashboard/views/pages/users/profile.php");
 }

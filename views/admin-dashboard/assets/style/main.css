@@ -12063,3 +12063,11 @@ a.color-icon.border-icon:hover {
 .checkbox-slider--b-flat input + span:before {
 	box-shadow: none;
 }
+.px-0{
+	padding-left: 0;
+	padding-right: 0;
+}
+.py-0{
+	padding-top: 0;
+	padding-bottom: 0;
+}

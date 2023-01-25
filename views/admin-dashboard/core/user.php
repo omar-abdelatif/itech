@@ -99,17 +99,21 @@ function insertPersonal($position, $country, $comp_name, $avatar)
 function insertSocial($facebook, $whatsapp)
 {
     $connection = connection();
-    $query = "INSERT INTO `users` (`facebook`, `whatsapp`) VALUES ('$facebook', '$whatsapp')";
+    $query = "INSERT INTO `social_data` (`facebook`, `whatsapp`) VALUES ('$facebook', '$whatsapp')";
     mysqli_query($connection, $query);
     return mysqli_affected_rows($connection);
 }
-function updateSecurity($id, $password)
+function selectSocail()
 {
     $connection = connection();
-    $query = "UPDATE `users` SET `password` = '$password' WHERE `id` = $id";
+    $query = "SELECT * FROM `social_data`";
+    $res = mysqli_query($connection, $query);
+    return mysqli_fetch_assoc($res);
+}
+function updateSecurity($password)
+{
+    $connection = connection();
+    $query = "UPDATE `users` SET `password` = '$password'";
     mysqli_query($connection, $query);
     return mysqli_affected_rows($connection);
-}
-function updateInfo(){
-    
 }

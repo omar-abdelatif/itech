@@ -37,9 +37,9 @@ if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($errors)) {
         insertUser($name, $email, $password);
         $_SESSION['success'] = "User Registed Successfully";
-        header("location: ../signin.php");
+        redirect("../signin.php");
     } else {
         $_SESSION['errors'] = $errors;
-        redirect("location: ../signup.php");
+        redirect("../signup.php");
     }
 }
