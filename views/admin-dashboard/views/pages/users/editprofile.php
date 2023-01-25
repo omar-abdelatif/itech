@@ -248,8 +248,128 @@ $getSocial = selectSocail();
                         </h3>
                     </div>
                 </div>
+                <?php if (isset($_SESSION['errors'])) : ?>
+                    <?php foreach ($_SESSION['errors'] as $error) : ?>
+                        <div class="alert alert-danger w-50 mx-auto mt-5 text-center">
+                            <p class="text-center p-0 m-0">
+                                <?= $error ?>
+                            </p>
+                        </div>
+                    <?php endforeach; ?>
+                    <?php unset($_SESSION['errors']) ?>
+                <?php elseif (isset($_SESSION['success'])) : ?>
+                    <div class="alert alert-success w-50 mx-auto mt-5 text-center">
+                        <?= $_SESSION['success'] ?>
+                        <?php unset($_SESSION['success']) ?>
+                    </div>
+                <?php endif; ?>
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
+                        <form action="<?= URL . "views/admin-dashboard/core/users/security.php" ?>" method="post" class="form-horizontal">
+                            <div class="row flex-row">
+                                <div class="col-md-6">
+                                    <div class="with_border with_padding">
+                                        <h4>Security</h4>
+                                        <hr>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label">Old password:</label>
+                                            <div class="col-lg-9">
+                                                <input type="password" value="<?= $getUsers['password'] ?>" placeholder="Password" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label">New password:</label>
+                                            <div class="col-lg-9">
+                                                <input type="password" name="password" placeholder="Password" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label">Repeat New password:</label>
+                                            <div class="col-lg-9">
+                                                <input type="password" name="c_password" placeholder="Confirm Password" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div>
+                                        <button type="submit" name="submit" class="theme_button wide_button">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <form action="<?= URL . "views/admin-dashboard/core/users/contact.php" ?>" method="post" class="form-horizontal">
+                            <div class="row flex-row">
+                                <div class="col-md-6">
+                                    <div class="with_border with_padding">
+                                        <h4>Contact info</h4>
+                                        <hr>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label">Work number:</label>
+                                            <div class="col-lg-9">
+                                                <input type="tel" name="work_num" value="<?= $getUsers['work_num'] ?>" placeholder="Office Phone Number" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label">Mobile number:</label>
+                                            <div class="col-lg-9">
+                                                <input type="tel" name="phone_num" value="<?= $getUsers['phone_num'] ?>" placeholder="Mobile Number" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label">Work address:</label>
+                                            <div class="col-lg-9">
+                                                <textarea rows="2" name="work_add" value="<?= $getUsers['work_add'] ?>" placeholder="Address" class="form-control"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div>
+                                        <button type="submit" name="submit" class="theme_button wide_button">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <form action="<?= URL . "views/admin-dashboard/core/users/social.php" ?>" method="post" class="form-horizontal">
+                            <div class="row flex-row">
+                                <div class="col-md-6">
+                                    <div class="with_border with_padding">
+                                        <h4>Social Networks</h4>
+                                        <hr>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label">FaceBook:</label>
+                                            <div class="col-lg-9">
+                                                <input type="text" placeholder="Facebook Username" value="<?= $getSocial['facebook'] ?>" name="facebook" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label">Whatsapp:</label>
+                                            <div class="col-lg-9">
+                                                <input type="text" placeholder="Whatsapp Mobile Number" value="<?= $getSocial['whatsapp'] ?>" name="whatsapp" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div>
+                                        <button type="submit" name="submit" class="theme_button wide_button">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
                         <form action="<?= URL . "views/admin-dashboard/core/users/userinfo.php" ?>" method="post" class="form-horizontal">
                             <div class="row flex-row">
                                 <div class="col-md-6">
@@ -268,6 +388,12 @@ $getSocial = selectSocail();
                                             <label class="col-lg-3 control-label">Admin name:</label>
                                             <div class="col-lg-9">
                                                 <input type="text" name="name" value="<?= $getUsers['name'] ?>" placeholder="Company Name" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label">E-mail address:</label>
+                                            <div class="col-lg-9">
+                                                <input type="email" name="email" value="<?= $getUsers['email'] ?>" placeholder="Email Address" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row form-group">
@@ -295,109 +421,6 @@ $getSocial = selectSocail();
                                             <label class="col-lg-3 control-label">Position:</label>
                                             <div class="col-lg-9">
                                                 <input type="text" name="position" value="<?= $getUsers['position'] ?>" placeholder="Position" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="row form-group text-center">
-                                            <div class="col-lg-12">
-                                                <button type="submit" name="submit" class="theme_button wide_button w-100">Submit</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-lg-6">
-                        <form action="<?= URL . "views/admin-dashboard/core/users/contact.php" ?>" method="post" class="form-horizontal">
-                            <div class="row flex-row">
-                                <div class="col-md-6">
-                                    <div class="with_border with_padding">
-                                        <h4>Contact info</h4>
-                                        <hr>
-                                        <div class="row form-group">
-                                            <label class="col-lg-3 control-label">Work number:</label>
-                                            <div class="col-lg-9">
-                                                <input type="tel" name="work_num" value="<?= $getUsers['work_num'] ?>" placeholder="Office Phone Number" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="row form-group">
-                                            <label class="col-lg-3 control-label">Mobile number:</label>
-                                            <div class="col-lg-9">
-                                                <input type="tel" name="phone_num" value="<?= $getUsers['phone_num'] ?>" placeholder="Mobile Number" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="row form-group">
-                                            <label class="col-lg-3 control-label">E-mail address:</label>
-                                            <div class="col-lg-9">
-                                                <input type="email" name="email" value="<?= $getUsers['email'] ?>" placeholder="Email Address" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="row form-group">
-                                            <label class="col-lg-3 control-label">Work address:</label>
-                                            <div class="col-lg-9">
-                                                <textarea rows="2" name="work_add" value="<?= $getUsers['work_add'] ?>" placeholder="Address" class="form-control"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div>
-                                        <button type="submit" name="submit" class="theme_button wide_button">Submit</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-lg-6">
-                        <form action="<?= URL . "views/admin-dashboard/core/users/security.php" ?>" method="post" class="form-horizontal">
-                            <div class="row flex-row">
-                                <div class="col-md-6">
-                                    <div class="with_border with_padding">
-                                        <h4>Security</h4>
-                                        <hr>
-                                        <div class="row form-group">
-                                            <label class="col-lg-3 control-label">New password:</label>
-                                            <div class="col-lg-9">
-                                                <input type="password" name="password" value="<?= $getUsers['password'] ?>" placeholder="Password" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="row form-group">
-                                            <label class="col-lg-3 control-label">Repeat New password:</label>
-                                            <div class="col-lg-9">
-                                                <input type="password" placeholder="Confirm Password" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div>
-                                        <button type="submit" name="submit" class="theme_button wide_button">Submit</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-lg-6">
-                        <form action="<?= URL . "views/admin-dashboard/core/users/social.php" ?>" method="post" class="form-horizontal">
-                            <div class="row flex-row">
-                                <div class="col-md-6">
-                                    <div class="with_border with_padding">
-                                        <h4>Social Networks</h4>
-                                        <hr>
-                                        <div class="row form-group">
-                                            <label class="col-lg-3 control-label">FaceBook:</label>
-                                            <div class="col-lg-9">
-                                                <input type="text" placeholder="Facebook Username" value="<?= $getSocial['facebook'] ?>" name="facebook" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="row form-group">
-                                            <label class="col-lg-3 control-label">Whatsapp:</label>
-                                            <div class="col-lg-9">
-                                                <input type="text" placeholder="Whatsapp Mobile Number" value="<?= $getSocial['whatsapp'] ?>" name="whatsapp" class="form-control">
                                             </div>
                                         </div>
                                     </div>

@@ -89,6 +89,12 @@ function insertContact($work_num, $phone_num, $work_add)
     mysqli_query($connection, $query);
     return mysqli_affected_rows($connection);
 }
+function selectContact(){
+    $connection = connection();
+    $query = "SELECT * FROM `social_data`";
+    $res = mysqli_query($connection, $query);
+    return mysqli_fetch_assoc($res);
+}
 function insertPersonal($position, $country, $comp_name, $avatar)
 {
     $connection = connection();
