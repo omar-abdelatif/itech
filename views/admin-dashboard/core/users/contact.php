@@ -12,4 +12,9 @@ if (!isset($_SESSION['login'])) {
     redirect(ERROR . "views/pages/error.php");
 }
 if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
+    $work_add = $_POST['work_add'];
+    $work_num = $_POST['worknum'];
+    $phone_num = $_POST['phone_num'];
+    insertContact($work_num, $phone_num, $work_add);
+    redirect(URL . "views/admin-dashboard/views/pages/users/editprofile.php");
 }

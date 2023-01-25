@@ -8,26 +8,6 @@ include INCLUDEURL . "views/admin-dashboard/config/database.php";
 //! Include Users Function
 include INCLUDEURL . "views/admin-dashboard/core/user.php";
 //! Include Auth
-if (!isset($_SESSION['login'])) {
-    redirect(ERROR . "views/pages/error.php");
-}
-if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
-    $errors = [];
-    $id = $_POST['id'];
-    $password = $_POST['password'];
-    $c_password = $_POST['c_password'];
-    //! Validation
-    if ($password != $c_password) {
-        $error[] = "Password Doesn't Match";
-    }
-    if (empty($errors)) {
-    }
-}
-if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
-    $errors = [];
-    $facebook = $_POST['facebook'];
-    $whatsapp = $_POST['whatsapp'];
-}
 if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     $errors = [];
     $name = $_POST['name'];

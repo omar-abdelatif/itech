@@ -85,13 +85,20 @@ function admin()
 function insertContact($work_num, $phone_num, $work_add)
 {
     $connection = connection();
-    $query = "INSERT INTO `users` (`work_num`, `phone_num`, `work_add`) VALUES ('$work_num', '$phone_num', '$work_add')";
+    $query = "INSERT INTO `contact` (`worknum`, `phone_num`, `work_add`) VALUES ('$work_num', '$phone_num', '$work_add')";
     mysqli_query($connection, $query);
     return mysqli_affected_rows($connection);
 }
 function selectContact(){
     $connection = connection();
-    $query = "SELECT * FROM `social_data`";
+    $query = "SELECT * FROM `contact`";
+    $res = mysqli_query($connection, $query);
+    return mysqli_fetch_assoc($res);
+}
+function updateContact($work_num, $phone_num, $work_add)
+{
+    $connection = connection();
+    $query = "UPDATE `contact` SET `worknum` = '$work_num', `phone_num` = '$phone_num',`work_add` = '$work_add'";
     $res = mysqli_query($connection, $query);
     return mysqli_fetch_assoc($res);
 }

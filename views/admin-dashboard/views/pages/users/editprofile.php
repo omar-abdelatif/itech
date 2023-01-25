@@ -16,6 +16,7 @@ include INCLUDEURL . "views/admin-dashboard/core/user.php";
 //! Semi Functions
 $getUsers = admin();
 $getSocial = selectSocail();
+$getContact = selectContact();
 ?>
 <div class="preloader">
     <div class="preloader_image"></div>
@@ -274,7 +275,7 @@ $getSocial = selectSocail();
                                         <div class="row form-group">
                                             <label class="col-lg-3 control-label">Old password:</label>
                                             <div class="col-lg-9">
-                                                <input type="password" value="<?= $getUsers['password'] ?>" placeholder="Password" class="form-control">
+                                                <input type="password" value="<?= $getUsers['password'] ?>" placeholder="Password" class="form-control" readonly>
                                             </div>
                                         </div>
                                         <div class="row form-group">
@@ -311,19 +312,19 @@ $getSocial = selectSocail();
                                         <div class="row form-group">
                                             <label class="col-lg-3 control-label">Work number:</label>
                                             <div class="col-lg-9">
-                                                <input type="tel" name="work_num" value="<?= $getUsers['work_num'] ?>" placeholder="Office Phone Number" class="form-control">
+                                                <input type="tel" name="worknum" value="<?= $getContact['worknum'] ?>" placeholder="Office Phone Number" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row form-group">
                                             <label class="col-lg-3 control-label">Mobile number:</label>
                                             <div class="col-lg-9">
-                                                <input type="tel" name="phone_num" value="<?= $getUsers['phone_num'] ?>" placeholder="Mobile Number" class="form-control">
+                                                <input type="tel" name="phone_num" value="" placeholder="Mobile Number" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row form-group">
                                             <label class="col-lg-3 control-label">Work address:</label>
                                             <div class="col-lg-9">
-                                                <textarea rows="2" name="work_add" value="<?= $getUsers['work_add'] ?>" placeholder="Address" class="form-control"></textarea>
+                                                <textarea rows="2" name="work_add" value="" placeholder="Address" class="form-control"></textarea>
                                             </div>
                                         </div>
                                     </div>
