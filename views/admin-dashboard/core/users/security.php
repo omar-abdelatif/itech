@@ -12,4 +12,6 @@ if (!isset($_SESSION['login'])) {
     redirect(ERROR . "views/pages/error.php");
 }
 if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
+    $password = $_POST['password'];
+    $c_password = $_POST['c_password'];
 }

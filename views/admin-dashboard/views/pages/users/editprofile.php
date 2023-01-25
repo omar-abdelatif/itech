@@ -259,8 +259,14 @@ $getUsers = admin();
                                         <div class="row form-group">
                                             <label class="col-lg-3 control-label" for="user-profile-avatar">Select Avatar</label>
                                             <div class="col-lg-9">
-                                                <input type="file" name="img" id="user-profile-avatar">
+                                                <input type="file" name="img" value="<?= $getUsers['img'] ?>" id="user-profile-avatar">
                                                 <p class="help-block">Select your 200x200px avatar</p>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-lg-3 control-label">Admin name:</label>
+                                            <div class="col-lg-9">
+                                                <input type="text" name="name" value="<?= $getUsers['name'] ?>" placeholder="Company Name" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row form-group">
@@ -281,13 +287,13 @@ $getUsers = admin();
                                         <div class="row form-group">
                                             <label class="col-lg-3 control-label">Company name:</label>
                                             <div class="col-lg-9">
-                                                <input type="text" name="comp_name" placeholder="Company Name" class="form-control">
+                                                <input type="text" value="<?= $getUsers['comp_name'] ?>" name="comp_name" placeholder="Company Name" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row form-group">
                                             <label class="col-lg-3 control-label">Position:</label>
                                             <div class="col-lg-9">
-                                                <input type="text" name="position" placeholder="Position" class="form-control">
+                                                <input type="text" name="position" value="<?= $getUsers['position'] ?>" placeholder="Position" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -299,25 +305,25 @@ $getUsers = admin();
                                         <div class="row form-group">
                                             <label class="col-lg-3 control-label">Work number:</label>
                                             <div class="col-lg-9">
-                                                <input type="tel" name="work_num" placeholder="Office Phone Number" class="form-control">
+                                                <input type="tel" name="work_num" value="<?= $getUsers['work_num'] ?>" placeholder="Office Phone Number" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row form-group">
                                             <label class="col-lg-3 control-label">Mobile number:</label>
                                             <div class="col-lg-9">
-                                                <input type="tel" name="phone_num" placeholder="Mobile Number" class="form-control">
+                                                <input type="tel" name="phone_num" value="<?= $getUsers['phone_num'] ?>" placeholder="Mobile Number" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row form-group">
                                             <label class="col-lg-3 control-label">E-mail address:</label>
                                             <div class="col-lg-9">
-                                                <input type="email" name="email" placeholder="Email Address" class="form-control">
+                                                <input type="email" name="email" value="<?= $getUsers['email'] ?>" placeholder="Email Address" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row form-group">
                                             <label class="col-lg-3 control-label">Work address:</label>
                                             <div class="col-lg-9">
-                                                <textarea rows="2" name="work_add" placeholder="Address" class="form-control"></textarea>
+                                                <textarea rows="2" name="work_add" value="<?= $getUsers['work_add'] ?>" placeholder="Address" class="form-control"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -331,7 +337,7 @@ $getUsers = admin();
                                         <div class="row form-group">
                                             <label class="col-lg-3 control-label">New password:</label>
                                             <div class="col-lg-9">
-                                                <input type="password" name="password" placeholder="Password" class="form-control">
+                                                <input type="password" name="password" value="<?= $getUsers['password'] ?>" placeholder="Password" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row form-group">
@@ -349,13 +355,13 @@ $getUsers = admin();
                                         <div class="row form-group">
                                             <label class="col-lg-3 control-label">FaceBook:</label>
                                             <div class="col-lg-9">
-                                                <input type="text" placeholder="Facebook Username" name="facebook" class="form-control">
+                                                <input type="text" placeholder="Facebook Username" value="<?= $getUsers['facebook'] ?>" name="facebook" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row form-group">
                                             <label class="col-lg-3 control-label">Whatsapp:</label>
                                             <div class="col-lg-9">
-                                                <input type="text" placeholder="Whatsapp Mobile Number" name="whatsapp" class="form-control">
+                                                <input type="text" placeholder="Whatsapp Mobile Number" value="<?= $getUsers['whatsapp'] ?>" name="whatsapp" class="form-control">
                                             </div>
                                         </div>
                                     </div>

@@ -25,15 +25,10 @@ function deleteUser($id)
     mysqli_query($connection, $query);
     return mysqli_affected_rows($connection);
 }
-function updateUser($id, $name, $email, $password, $img)
+function updateUser($id, $name, $email, $password)
 {
     $connection = connection();
-    if (!empty($img)) {
-        $extra = ", `img` = '$img'";
-    } else {
-        $extra = "";
-    }
-    $query = "UPDATE `users` SET `name` = '$name', `email` = '$email', `password` = '$password' $extra WHERE `id` = $id";
+    $query = "UPDATE `users` SET `name` = '$name', `email` = '$email', `password` = '$password' WHERE `id` = $id";
     mysqli_query($connection, $query);
     return mysqli_affected_rows($connection);
 }
@@ -114,4 +109,7 @@ function updateSecurity($id, $password)
     $query = "UPDATE `users` SET `password` = '$password' WHERE `id` = $id";
     mysqli_query($connection, $query);
     return mysqli_affected_rows($connection);
+}
+function updateInfo(){
+    
 }
