@@ -13,9 +13,12 @@ if (!isset($_SESSION['login'])) {
 }
 //! Include Products Functions
 include INCLUDEURL . "views/admin-dashboard/core/products/products.php";
+//! Include Users Functions
+include INCLUDEURL . "views/admin-dashboard/core/user.php";
 //! Semi Functions
 $id = $_GET['pro_id'];
 $product = getProductById($id);
+$getUsers = admin();
 ?>
 <div class="preloader">
     <div class="preloader_image"></div>
@@ -57,7 +60,7 @@ $product = getProductById($id);
                                 <a href="#">
                                     <div class="media">
                                         <div class="media-left media-middle">
-                                            <img src="images/team_square/01.jpg" alt="">
+                                            <img src="<?= URL . "assets/imgs/images/users/" ?><?= $getUsers['img'] ?> " alt="<?= $getUsers['img'] ?>">
                                         </div>
                                         <div class="media-body media-middle">
                                             <h4>

@@ -51,7 +51,7 @@ include INCLUDEURL . "views/admin-dashboard/core/services/allservices.php";
                                 <a href="#">
                                     <div class="media">
                                         <div class="media-left media-middle">
-                                            <img src="images/team_square/01.jpg" alt="">
+                                            <img src="<?= URL . "assets/imgs/images/users/" ?><?= $getUsers['img'] ?> " alt="<?= $getUsers['img'] ?>">
                                         </div>
                                         <div class="media-body media-middle">
                                             <h4>

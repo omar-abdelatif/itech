@@ -7,10 +7,13 @@ include "../../../core/functions.php";
 include INCLUDEURL . "views/admin-dashboard/views/inc/header.php";
 //! Include Auth
 if (!isset($_SESSION['login'])) {
-    redirect("location:" . ERROR . "pages/error.php");
+    redirect(ERROR . "pages/error.php");
 }
 //! Include Products Functions
 include INCLUDEURL . "views/admin-dashboard/core/products/products.php";
+//! Include Users Functions
+include INCLUDEURL . "views/admin-dashboard/core/user.php";
+$getUsers = admin();
 ?>
 <div class="preloader">
     <div class="preloader_image"></div>
@@ -51,7 +54,7 @@ include INCLUDEURL . "views/admin-dashboard/core/products/products.php";
                                 <a href="#">
                                     <div class="media">
                                         <div class="media-left media-middle">
-                                            <img src="images/team_square/01.jpg" alt="">
+                                            <img src="<?= URL . "assets/imgs/images/users/" ?><?= $getUsers['img'] ?> " alt="<?= $getUsers['img'] ?>">
                                         </div>
                                         <div class="media-body media-middle">
                                             <h4>

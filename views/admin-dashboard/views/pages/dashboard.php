@@ -5,10 +5,15 @@ if (session_status() == PHP_SESSION_NONE) session_start();
 include "../../core/functions.php";
 //! Include Header
 include INCLUDEURL . "views/admin-dashboard/views/inc/header.php";
+//! Include Database
+include INCLUDEURL . "views/admin-dashboard/config/database.php";
+//! Include User Functions
+include INCLUDEURL . "views/admin-dashboard/core/user.php";
 //! Include Auth Admin
 if (!isset($_SESSION['login'])) {
     redirect(ERROR . "views/pages/error.php");
 }
+$getUsers = admin();
 ?>
 <div class="preloader">
     <div class="preloader_image"></div>
@@ -49,7 +54,7 @@ if (!isset($_SESSION['login'])) {
                                 <a href="#">
                                     <div class="media">
                                         <div class="media-left media-middle">
-                                            <img src="images/team_square/01.jpg" alt="">
+                                            <img src="<?= URL . "assets/imgs/images/users/" ?><?= $getUsers['img'] ?> " alt="<?= $getUsers['img'] ?>">
                                         </div>
                                         <div class="media-body media-middle">
                                             <h4>

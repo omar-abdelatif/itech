@@ -79,6 +79,13 @@ function getAllImage()
     $query = mysqli_query($connection, $selectsql);
     return mysqli_fetch_all($query, MYSQLI_ASSOC);
 }
+function admin()
+{
+    $connection = connection();
+    $query = "SELECT * FROM `users`";
+    $res = mysqli_query($connection, $query);
+    return mysqli_fetch_assoc($res);
+}
 // function updateContact(){
 //  
 // }
