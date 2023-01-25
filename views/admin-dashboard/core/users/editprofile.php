@@ -26,10 +26,12 @@ if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     $work_add = $_POST['work_add'];
     $phone_num = $_POST['phone_num'];
     $work_num = $_POST['work_num'];
-    $facebook = $_POST['facebook'];
-    $whatsapp = $_POST['whatsapp'];
+    
     //! Validation
     if ($password != $c_password) {
         $error[] = "Password Doesn't Match";
+    }
+    if (empty($errors)) {
+
     }
 }

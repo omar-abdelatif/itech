@@ -2,7 +2,8 @@
 function insertUser($name, $email, $password)
 {
     $connection = connection();
-    mysqli_query($connection, "INSERT INTO `users` (`name`, `email`, `password`) VALUES ('$name', '$email', '$password')");
+    $query = "INSERT INTO `users` (`name`, `email`, `password`) VALUES ('$name', '$email', '$password')";
+    mysqli_query($connection, $query);
     $affected = mysqli_affected_rows($connection);
     if ($affected) {
         return true;
@@ -86,12 +87,24 @@ function admin()
     $res = mysqli_query($connection, $query);
     return mysqli_fetch_assoc($res);
 }
-function updateContact($id, $work_num, $phone_num, $email, $work_add){
+function insertContact($work_num, $phone_num, $email, $work_add)
+{
     $connection = connection();
-    if (!empty($img)) {
-        $extra = ", `img` = '$img'";
-    } else {
-        $extra = "";
-    }
-    $query = "UPDATE `users` SET `work_num` = '$work_num', `email` = '$email', `phone_num` = '$phone_num', `work_add` = '$work_add' $extra WHERE `id` = $id";
+    $query = "INSERT INTO `users` (`work_num`, `phone_num`, `email`, `work_add`) VALUES ('$work_num', '$phone_num', '$email', '$work_add')";
+    mysqli_query($connection, $query);
+    return mysqli_affected_rows($connection);
+}
+function insertPersonal($position, $country, $comp_name, $avatar)
+{
+    $connection = connection();
+    $query = "INSERT INTO `users` (`position`, `country`, `comp_name`, `img`) VALUES ('$position', '$country', '$comp_name', '$avatar')";
+    mysqli_query($connection, $query);
+    return mysqli_affected_rows($connection);
+}
+function insertSocial($facebook, $whatsapp)
+{
+    $connection = connection();
+    $query = "INSERT INTO `users` (`facebook`, `whatsapp`) VALUES ('$facebook', '$whatsapp')";
+    mysqli_query($connection, $query);
+    return mysqli_affected_rows($connection);
 }
