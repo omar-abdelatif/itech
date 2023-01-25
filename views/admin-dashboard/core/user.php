@@ -87,10 +87,10 @@ function admin()
     $res = mysqli_query($connection, $query);
     return mysqli_fetch_assoc($res);
 }
-function insertContact($work_num, $phone_num, $email, $work_add)
+function insertContact($work_num, $phone_num, $work_add)
 {
     $connection = connection();
-    $query = "INSERT INTO `users` (`work_num`, `phone_num`, `email`, `work_add`) VALUES ('$work_num', '$phone_num', '$email', '$work_add')";
+    $query = "INSERT INTO `users` (`work_num`, `phone_num`, `work_add`) VALUES ('$work_num', '$phone_num', '$work_add')";
     mysqli_query($connection, $query);
     return mysqli_affected_rows($connection);
 }
@@ -105,6 +105,13 @@ function insertSocial($facebook, $whatsapp)
 {
     $connection = connection();
     $query = "INSERT INTO `users` (`facebook`, `whatsapp`) VALUES ('$facebook', '$whatsapp')";
+    mysqli_query($connection, $query);
+    return mysqli_affected_rows($connection);
+}
+function updateSecurity($id, $password)
+{
+    $connection = connection();
+    $query = "UPDATE `users` SET `password` = '$password' WHERE `id` = $id";
     mysqli_query($connection, $query);
     return mysqli_affected_rows($connection);
 }
