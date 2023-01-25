@@ -253,7 +253,6 @@ $getUsers = admin();
                             <div class="col-xs-12 col-sm-12">
                                 <div class="with_border with_padding">
                                     <div class="media big-left-media">
-
                                         <div class="media-left">
                                             <img src="<?= URL . 'assets/imgs/images/users/' ?><?= $getUsers['img'] ?>" alt="<?= $getUsers['img'] ?>">
                                         </div>
@@ -269,7 +268,6 @@ $getUsers = admin();
                                                 aliquip ex ea commodo.
                                             </p>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -281,7 +279,6 @@ $getUsers = admin();
                                         User Info
                                     </h4>
                                     <ul class="list1 no-bullets">
-
                                         <li>
                                             <div class="media small-teaser">
                                                 <div class="media-left media-middle">
@@ -375,7 +372,6 @@ $getUsers = admin();
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="panel-group bottommargin_0" id="contact-info-accordion">
-
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
@@ -468,7 +464,6 @@ $getUsers = admin();
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>

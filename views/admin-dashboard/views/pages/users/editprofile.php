@@ -14,7 +14,7 @@ if (!isset($_SESSION['login'])) {
 //! Include Services Functions
 include INCLUDEURL . "views/admin-dashboard/core/user.php";
 //! Semi Functions
-$getUsers = users();
+$getUsers = admin();
 ?>
 <div class="preloader">
     <div class="preloader_image"></div>
@@ -255,6 +255,7 @@ $getUsers = users();
                                     <div class="with_border with_padding">
                                         <h4>User info</h4>
                                         <hr>
+                                        <input type="hidden" value="<?= $getUsers['id'] ?>" name="id">
                                         <div class="row form-group">
                                             <label class="col-lg-3 control-label" for="user-profile-avatar">Select Avatar</label>
                                             <div class="col-lg-9">
@@ -267,26 +268,26 @@ $getUsers = users();
                                             <div class="col-lg-9">
                                                 <select class="form-control" name="country">
                                                     <option selected="">Select Country</option>
-                                                    <option value="egy">Egypt</option>
-                                                    <option value="usa">USA</option>
-                                                    <option value="uk">United Kingdom</option>
-                                                    <option value="aus">Australia</option>
-                                                    <option value="get">Germany</option>
-                                                    <option value="fr">France</option>
-                                                    <option value="other">Other</option>
+                                                    <option value="Egypt">Egypt</option>
+                                                    <option value="USA">USA</option>
+                                                    <option value="United Kingdom">United Kingdom</option>
+                                                    <option value="Australia">Australia</option>
+                                                    <option value="Germany">Germany</option>
+                                                    <option value="France">France</option>
+                                                    <option value="Other">Other</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="row form-group">
                                             <label class="col-lg-3 control-label">Company name:</label>
                                             <div class="col-lg-9">
-                                                <input type="text" name="comp_name" class="form-control">
+                                                <input type="text" name="comp_name" placeholder="Company Name" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row form-group">
                                             <label class="col-lg-3 control-label">Position:</label>
                                             <div class="col-lg-9">
-                                                <input type="text" name="position" class="form-control">
+                                                <input type="text" name="position" placeholder="Position" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -363,7 +364,7 @@ $getUsers = users();
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div>
-                                        <button type="submit" class="theme_button wide_button">Submit</button>
+                                        <button type="submit" name="submit" class="theme_button wide_button">Submit</button>
                                     </div>
                                 </div>
                             </div>

@@ -86,6 +86,12 @@ function admin()
     $res = mysqli_query($connection, $query);
     return mysqli_fetch_assoc($res);
 }
-// function updateContact(){
-//  
-// }
+function updateContact($id, $work_num, $phone_num, $email, $work_add){
+    $connection = connection();
+    if (!empty($img)) {
+        $extra = ", `img` = '$img'";
+    } else {
+        $extra = "";
+    }
+    $query = "UPDATE `users` SET `work_num` = '$work_num', `email` = '$email', `phone_num` = '$phone_num', `work_add` = '$work_add' $extra WHERE `id` = $id";
+}
